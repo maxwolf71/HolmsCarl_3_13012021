@@ -1,4 +1,261 @@
-#logo img {
+.reservation__btn {
+  color: #FFF;
+  background: #FF79DA;
+  margin: 30px 5px;
+  padding: 20px 30px;
+  cursor: pointer;
+  border-radius: 30px;
+  border: none;
+}
+
+.reservation__btn:hover {
+  color: red;
+}
+
+.selection__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: lightgray;
+  margin: 30px auto;
+  padding: 30px 10px;
+  cursor: pointer;
+  border-radius: 30px;
+  border: none;
+}
+
+.selection__btn__number {
+  background-color: #9356DC;
+  padding: 5px;
+}
+
+.menu_btn {
+  color: #FFF;
+  background: #FF79DA;
+  margin: 30px 5px;
+  padding: 20px 30px;
+  cursor: pointer;
+  border-radius: 30px;
+  border: none;
+}
+
+.menu_btn:hover {
+  color: red;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 1rem;
+}
+
+h1 {
+  font-size: 1.4rem;
+}
+
+/* %align_center {
+
+}*/
+.top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.top__logo img {
+  height: 30px;
+  -webkit-text-emphasis-color: red;
+          text-emphasis-color: red;
+}
+
+.top__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 20px;
+}
+
+.top__search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 20px;
+}
+
+.top__icon {
+  margin-right: 15px;
+}
+
+.reservation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  background-color: #f3efef;
+}
+
+.restaurants {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.gallery__img {
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+  position: relative;
+  width: 400px;
+  height: 200px;
+  margin-bottom: 20px;
+}
+
+.gallery__img1 {
+  background-image: url(../images/restaurants/la-palette-du-gout.jpg);
+}
+
+.gallery__img2 {
+  background-image: url(../images/restaurants/la-note-enchantee.jpg);
+}
+
+.gallery__img3 {
+  background-image: url(../images/restaurants/a-la-francaise.jpg);
+}
+
+.gallery__img4 {
+  background-image: url(../images/restaurants/le-delice-des-sens.jpg);
+}
+
+.gallery__new {
+  position: absolute;
+  right: 0;
+  background-color: #99E2D0;
+}
+
+.gallery__details {
+  background-color: white;
+  color: black;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer {
+  padding: 30px 20px;
+  background-color: #312f2f;
+  color: white;
+  line-height: 1.5;
+}
+
+.footer__logo img {
   height: 20px;
+  margin-bottom: 15px;
+}
+
+.footer__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__item .fas {
+  margin-right: 10px;
+}
+
+.image img {
+  width: 100%;
+}
+
+.menu {
+  background-color: #fae6e6;
+  border-radius: 30px 30px 0 0;
+  padding: 15px 10px;
+}
+
+.menu__intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px 0;
+}
+
+.menu__category--card {
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin: 10px 0;
+  border-radius: 15px;
+  padding: 5px;
+}
+
+.menu__category--card .text {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  line-height: 1.4;
+}
+
+.menu__category--card .price {
+  font-weight: bold;
 }
 /*# sourceMappingURL=styles.css.map */
