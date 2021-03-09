@@ -1,32 +1,18 @@
-@import 'colors';
-@import 'buttons';
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', Arial, sans-serif;
-    font-size: 1rem;
-}
-h1 {
-    font-family: 'Shrikhand', Arial, sans-serif;
-    font-size: 1.8rem;
-}
-h2 {
-    font-size: 1.5rem;
-}
+@import 'resets';
+@import 'variables';
+@import 'components';
 
 
-//------------------- LOGO + CITY SEARCH ---------------------------------
 
-/* %align_center {
-
-}*/
-
-.top {
+.flex_center {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+//------------------- LOGO + CITY SEARCH ---------------------------------
+
+.top {
+    @extend .flex_center;
 
     &__logo {
         padding: 20px; 
@@ -41,8 +27,7 @@ h2 {
     }
 
     &__search {
-        display: flex;
-        justify-content: center;
+        @extend .flex_center;
         padding: 18px;
         &:hover {
             background-color: rgb(209, 197, 186);
@@ -56,44 +41,28 @@ h2 {
 //------------------------ RESERVATION  --------------------------------
 
 .reservation {
-    display: flex;
+    @extend .flex_center;
     flex-direction: column;
-    align-items: center;
     text-align: center;
-    background-color: rgb(243, 239, 239);
-    padding: 15% 10%;
+    background-color: $color-4th;
+    padding: 10%;
 }
 
 //--------------------------  FONCTIONNEMENT  -------------------------------
 
 .selection {
-    margin-top: 50px;
+    margin: 50px 0;
     
-    &__btn {
-        width: 80%;
-        background: rgb(248, 239, 239);
-        border-radius: 20px;
-        padding: 20px 0;
-        margin: 20px auto;
-
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        &:hover {
-            cursor: pointer;
-        }
-    }
     &__number {
-        background-color: $color-primary;
+        background-color: $color-1st;
         color: white;
         position: absolute;
-        left: 8%;
+        left: 2%;
 
         border-radius: 50%;
         width: 34px;
         height: 34px;
         padding: 10px;
-
         text-align: center;
     }
     & p {
@@ -103,7 +72,7 @@ h2 {
 
 //------------------------ RESTAURANTS -------------------------
 .restaurants {
-    background-color: rgb(243, 241, 239);
+    background-color: $color-4th;
     padding-top: 70px;
 }
 .gallery {
@@ -126,7 +95,7 @@ h2 {
     }
 
     &__new {
-        background-color: $color-tertiary;
+        background-color: $color-3rd;
         color: green;
         padding: 5px;
         border-radius: 2px;
@@ -134,9 +103,8 @@ h2 {
         top: 5%;
         right: 5%;
     }
-
     &__details {
-        background-color: white;
+        background-color: $color-5th;
         color: black;
         padding: 10px;
         display: flex;
@@ -147,7 +115,7 @@ h2 {
     & .far {
         font-size: 2rem;
         &:hover {
-            background-color: $color-secondary ;
+            background-color: $color-2nd;
         }
     }
   
@@ -157,16 +125,16 @@ h2 {
 
 .footer {
     padding: 30px 20px;
-    background-color: rgb(49, 47, 47);
+    background-color: $bg-footer;
     color: white;
     line-height: 1.5;
 
     &__logo {
-        margin-bottom: 15px;
+        margin-bottom: 5%;
     }
 
     &__logo img {
-        height: 20px;
+        width: 30%;
         filter: brightness(0) invert(1);
     }
     &__item {
@@ -187,17 +155,16 @@ h2 {
    
 }
 
-//-------------------------- menu page 1  -------------------------------
+//-------------------------- page menu A la française  -------------------------------
 
 .image img {
     width: 100%;
-    height: auto;
     position: relative;
     z-index: 1;
 }
 
 .menu {
-    background-color: rgb(250, 230, 230);
+    background-color: $color-4th;
     border-radius: 30px 30px 0 0;
     padding: 15px 10px;
     position: relative;
@@ -205,17 +172,27 @@ h2 {
     z-index: 2;
     display: flex;
     flex-direction: column;
-    align-items: center;
 
     &__intro {
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin: 20px 0;
+        & .far {
+            font-size: 2rem;
+            &:hover {
+                background-color: $color-2nd;
+            }
+        }
     }
     &__items {
+        .menu__line {
+            border: 2px solid $color-3rd;
+            width: 40px;
+            margin-top: 5px;
+        }
         &--card {
-            background-color: #fff;
+            background-color: $color-5th;
             display: flex;
             justify-content: space-between;
             align-items: flex-end;
@@ -232,5 +209,6 @@ h2 {
             }
         }
     }
+    
 
 }

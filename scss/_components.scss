@@ -1,0 +1,54 @@
+// Boutons "Explorer nos restaurants" ---------------------
+
+.reservation__btn {
+    color: #FFF;
+    background: $color-2nd ;
+    margin-top: 30px;
+    padding: 15px 25px;
+    border-radius: 30px;
+    border: none;
+
+    &:hover {
+        cursor: pointer;
+        opacity: 0.8;
+        box-shadow: 5px 5px 20px $color-2nd;
+    }
+}
+
+// Boutons divers du fonctionnement ---------------------
+
+.selection__btn {
+    width: 90%;
+    background: $color-4th;
+    border-radius: 20px;
+    padding: 28px 0;
+    margin: 20px auto;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+// Bouton "commander" du menu ---------------------
+
+.menu__btn {
+    width: 50%;
+    color: #FFF;
+    background: $color-2nd ;
+    margin: 30px 5px;
+    padding: 20px 30px;
+    border-radius: 30px;
+    border: none;
+    align-self: center;
+    
+    &:hover {
+        opacity: 0.8;
+        box-shadow: 5px 5px 20px $color-2nd;
+        cursor: pointer;
+    }
+}
+
+
