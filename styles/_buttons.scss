@@ -8,35 +8,26 @@
     border: none;
 
     &:hover {
-        color: red;
+        opacity: 0.8;
+        box-shadow: 5px 5px 20px $color-secondary;
     }
 }
 
-.selection__btn {
-    display: flex;
-    align-items: center;
-    background: lightgray;
-    margin: 30px auto;
-    padding: 30px 10px;
-    cursor: pointer;
-    border-radius: 30px;
-    border: none;
-    &__number {
-        background-color: $color-primary;
-        padding: 5px;
-    }
-}
+
 
 .menu_btn {
+    width: 50%;
     color: #FFF;
     background: $color_secondary ;
     margin: 30px 5px;
     padding: 20px 30px;
-    cursor: pointer;
     border-radius: 30px;
     border: none;
+    
 
     &:hover {
-        color: red;
+        opacity: 0.8;
+        box-shadow: 5px 5px 20px $color-secondary;
+        cursor: pointer;
     }
 }

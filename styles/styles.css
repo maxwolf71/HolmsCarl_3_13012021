@@ -9,41 +9,26 @@
 }
 
 .reservation__btn:hover {
-  color: red;
-}
-
-.selection__btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: lightgray;
-  margin: 30px auto;
-  padding: 30px 10px;
-  cursor: pointer;
-  border-radius: 30px;
-  border: none;
-}
-
-.selection__btn__number {
-  background-color: #9356DC;
-  padding: 5px;
+  opacity: 0.8;
+  -webkit-box-shadow: 5px 5px 20px #FF79DA;
+          box-shadow: 5px 5px 20px #FF79DA;
 }
 
 .menu_btn {
+  width: 50%;
   color: #FFF;
   background: #FF79DA;
   margin: 30px 5px;
   padding: 20px 30px;
-  cursor: pointer;
   border-radius: 30px;
   border: none;
 }
 
 .menu_btn:hover {
-  color: red;
+  opacity: 0.8;
+  -webkit-box-shadow: 5px 5px 20px #FF79DA;
+          box-shadow: 5px 5px 20px #FF79DA;
+  cursor: pointer;
 }
 
 * {
@@ -56,7 +41,12 @@
 }
 
 h1 {
-  font-size: 1.4rem;
+  font-family: 'Shrikhand', Arial, sans-serif;
+  font-size: 1.8rem;
+}
+
+h2 {
+  font-size: 1.5rem;
 }
 
 /* %align_center {
@@ -66,26 +56,26 @@ h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.top__logo {
+  padding: 20px;
 }
 
 .top__logo img {
   height: 30px;
-  -webkit-text-emphasis-color: red;
-          text-emphasis-color: red;
 }
 
-.top__logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 20px;
+.top__arrow--back {
+  position: absolute;
+  left: 20px;
+  color: black;
 }
 
 .top__search {
@@ -95,7 +85,11 @@ h1 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 20px;
+  padding: 18px;
+}
+
+.top__search:hover {
+  background-color: #d1c5ba;
 }
 
 .top__icon {
@@ -115,69 +109,108 @@ h1 {
           align-items: center;
   text-align: center;
   background-color: #f3efef;
+  padding: 15% 10%;
 }
 
-.restaurants {
+.selection {
+  margin-top: 50px;
+}
+
+.selection__btn {
+  width: 80%;
+  background: #f8efef;
+  border-radius: 20px;
+  padding: 20px 0;
+  margin: 20px auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-.gallery {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+.selection__btn:hover {
+  cursor: pointer;
 }
 
-.gallery__img {
-  background-size: cover;
-  background-position: center;
-  border-radius: 15px;
+.selection__number {
+  background-color: #9356DC;
+  color: white;
+  position: absolute;
+  left: 8%;
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  padding: 10px;
+  text-align: center;
+}
+
+.selection p {
+  font-weight: bold;
+}
+
+.restaurants {
+  background-color: #f3f1ef;
+  padding-top: 70px;
+}
+
+.gallery {
+  padding: 10px;
+}
+
+.gallery__card {
   position: relative;
-  width: 400px;
-  height: 200px;
   margin-bottom: 20px;
 }
 
-.gallery__img1 {
-  background-image: url(../images/restaurants/la-palette-du-gout.jpg);
+.gallery a {
+  text-decoration: none;
 }
 
-.gallery__img2 {
-  background-image: url(../images/restaurants/la-note-enchantee.jpg);
-}
-
-.gallery__img3 {
-  background-image: url(../images/restaurants/a-la-francaise.jpg);
-}
-
-.gallery__img4 {
-  background-image: url(../images/restaurants/le-delice-des-sens.jpg);
+.gallery img {
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 18px 18px 0 0;
 }
 
 .gallery__new {
-  position: absolute;
-  right: 0;
   background-color: #99E2D0;
+  color: green;
+  padding: 5px;
+  border-radius: 2px;
+  position: absolute;
+  top: 5%;
+  right: 5%;
 }
 
 .gallery__details {
   background-color: white;
   color: black;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 0 0 20px 20px;
+}
+
+.gallery .far {
+  font-size: 2rem;
+}
+
+.gallery .far:hover {
+  background-color: #FF79DA;
 }
 
 .footer {
@@ -187,9 +220,14 @@ h1 {
   line-height: 1.5;
 }
 
+.footer__logo {
+  margin-bottom: 15px;
+}
+
 .footer__logo img {
   height: 20px;
-  margin-bottom: 15px;
+  -webkit-filter: brightness(0) invert(1);
+          filter: brightness(0) invert(1);
 }
 
 .footer__item {
@@ -205,14 +243,39 @@ h1 {
   margin-right: 10px;
 }
 
+.footer a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer a a:hover {
+  cursor: pointer;
+}
+
 .image img {
   width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 1;
 }
 
 .menu {
   background-color: #fae6e6;
   border-radius: 30px 30px 0 0;
   padding: 15px 10px;
+  position: relative;
+  top: -60px;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .menu__intro {
@@ -228,7 +291,7 @@ h1 {
   margin: 20px 0;
 }
 
-.menu__category--card {
+.menu__items--card {
   background-color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -241,10 +304,10 @@ h1 {
           align-items: flex-end;
   margin: 10px 0;
   border-radius: 15px;
-  padding: 5px;
+  padding: 3px;
 }
 
-.menu__category--card .text {
+.menu__items--card .text {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -255,7 +318,7 @@ h1 {
   line-height: 1.4;
 }
 
-.menu__category--card .price {
+.menu__items--card .price {
   font-weight: bold;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -1,6 +1,6 @@
 @import 'colors';
 @import 'buttons';
-@import 'images';
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -9,8 +9,13 @@
     font-size: 1rem;
 }
 h1 {
-    font-size: 1.4rem;
+    font-family: 'Shrikhand', Arial, sans-serif;
+    font-size: 1.8rem;
 }
+h2 {
+    font-size: 1.5rem;
+}
+
 
 //------------------- LOGO + CITY SEARCH ---------------------------------
 
@@ -20,22 +25,28 @@ h1 {
 
 .top {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
+    &__logo {
+        padding: 20px; 
+    }
     &__logo img {
         height: 30px;
-        text-emphasis-color: red;
     }
-    &__logo {
-        display: flex;
-        justify-content: center;
-        padding: 20px;
+    &__arrow--back {
+        position: absolute;
+        left: 20px;
+        color: black;
     }
 
     &__search {
         display: flex;
         justify-content: center;
-        padding: 20px;
+        padding: 18px;
+        &:hover {
+            background-color: rgb(209, 197, 186);
+        }
     }
     &__icon {
         margin-right: 15px;
@@ -50,58 +61,96 @@ h1 {
     align-items: center;
     text-align: center;
     background-color: rgb(243, 239, 239);
+    padding: 15% 10%;
 }
 
-//--------------------------SELECTION-------------------------------
+//--------------------------  FONCTIONNEMENT  -------------------------------
 
+.selection {
+    margin-top: 50px;
+    
+    &__btn {
+        width: 80%;
+        background: rgb(248, 239, 239);
+        border-radius: 20px;
+        padding: 20px 0;
+        margin: 20px auto;
+
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    &__number {
+        background-color: $color-primary;
+        color: white;
+        position: absolute;
+        left: 8%;
+
+        border-radius: 50%;
+        width: 34px;
+        height: 34px;
+        padding: 10px;
+
+        text-align: center;
+    }
+    & p {
+        font-weight: bold;
+    }
+}
 
 //------------------------ RESTAURANTS -------------------------
 .restaurants {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    background-color: rgb(243, 241, 239);
+    padding-top: 70px;
 }
 .gallery {
-    display: flex;
-    flex-direction: column;
-    
-    &__img {
-        background-size: cover;
-        background-position: center;
-        border-radius: 15px;
+    padding: 10px;
+
+    &__card {
         position: relative;
-        width: 400px;
-        height: 200px;
         margin-bottom: 20px;
     }
 
-    &__img1  {
-        background-image: url(../images/restaurants/la-palette-du-gout.jpg);
+    & a {
+        text-decoration: none;
     }
-    &__img2  {
-        background-image: url(../images/restaurants/la-note-enchantee.jpg);
-    }
-    &__img3  {
-        background-image: url(../images/restaurants/a-la-francaise.jpg);
-    }
-    &__img4  {
-        background-image: url(../images/restaurants/le-delice-des-sens.jpg);
+    
+    & img {
+       width: 100%;
+       height: 200px;
+       object-fit: cover;
+       border-radius: 18px 18px 0 0;
     }
 
     &__new {
-        position: absolute;
-        right: 0;
         background-color: $color-tertiary;
+        color: green;
+        padding: 5px;
+        border-radius: 2px;
+        position: absolute;
+        top: 5%;
+        right: 5%;
     }
 
     &__details {
         background-color: white;
         color: black;
-        position: absolute;
-        bottom: 0;
-        width: 100%;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 0 0 20px 20px;
     }
-
+    & .far {
+        font-size: 2rem;
+        &:hover {
+            background-color: $color-secondary ;
+        }
+    }
+  
 }
 
 //-------------------------- FOOTER  -------------------------------
@@ -111,9 +160,14 @@ h1 {
     background-color: rgb(49, 47, 47);
     color: white;
     line-height: 1.5;
+
+    &__logo {
+        margin-bottom: 15px;
+    }
+
     &__logo img {
         height: 20px;
-        margin-bottom: 15px;
+        filter: brightness(0) invert(1);
     }
     &__item {
         display: flex;
@@ -123,25 +177,43 @@ h1 {
             margin-right: 10px;
         }
     }
+    & a {
+        color: white;
+        text-decoration: none;
+        & a:hover {
+            cursor: pointer;
+        }
+    }
+   
 }
 
 //-------------------------- menu page 1  -------------------------------
 
 .image img {
     width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 1;
 }
 
 .menu {
     background-color: rgb(250, 230, 230);
     border-radius: 30px 30px 0 0;
     padding: 15px 10px;
+    position: relative;
+    top: -60px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     &__intro {
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin: 20px 0;
     }
-    &__category {
+    &__items {
         &--card {
             background-color: #fff;
             display: flex;
@@ -149,14 +221,13 @@ h1 {
             align-items: flex-end;
             margin: 10px 0;
             border-radius: 15px;
-            padding: 5px;
+            padding: 3px;
             .text {
                 flex-direction: column;
                 align-items: flex-start;
                 line-height: 1.4;
             }
             .price {
-
                 font-weight: bold;
             }
         }
