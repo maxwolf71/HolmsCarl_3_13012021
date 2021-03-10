@@ -4,3 +4,9 @@ $color-3rd: #99E2D0;
 $color-4th: rgb(246, 241, 241);
 $color-5th: #fff;
 $bg-footer: rgb(49, 47, 47);
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}

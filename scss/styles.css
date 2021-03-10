@@ -3,16 +3,6 @@
           box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', Arial, sans-serif;
-}
-
-h1 {
-  font-family: 'Shrikhand', Arial, sans-serif;
-  font-size: 1.8rem;
-}
-
-h2 {
-  font-size: 1.5rem;
 }
 
 .reservation__btn {
@@ -72,7 +62,20 @@ h2 {
   cursor: pointer;
 }
 
-.flex_center, .top, .top__search, .reservation {
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+}
+
+h1 {
+  font-family: 'Shrikhand', Arial, sans-serif;
+  font-size: 1.8rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+.top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -85,11 +88,11 @@ h2 {
 }
 
 .top__logo {
-  padding: 20px;
+  padding: 1.2rem;
 }
 
 .top__logo img {
-  height: 30px;
+  height: 1.8rem;
 }
 
 .top__arrow--back {
@@ -99,6 +102,15 @@ h2 {
 }
 
 .top__search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 18px;
 }
 
@@ -111,6 +123,15 @@ h2 {
 }
 
 .reservation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
