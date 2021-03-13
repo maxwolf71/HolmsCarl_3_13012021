@@ -2,16 +2,19 @@
 
 .reservation__btn {
     color: #FFF;
-    background: $color-2nd ;
+    background: $primary-color;
     margin-top: 30px;
     padding: 15px 25px;
     border-radius: 30px;
     border: none;
+    transition: transform 1000ms ease-in-out, background-color 5000ms ease-in-out;
 
     &:hover {
         cursor: pointer;
         opacity: 0.8;
-        box-shadow: 5px 5px 20px $color-2nd;
+        box-shadow: 5px 5px 20px $primary-color;
+        transform: scale(1.8);
+        background-color: $bg-footer;
     }
 }
 
@@ -19,7 +22,7 @@
 
 .selection__btn {
     width: 90%;
-    background: $color-4th;
+    background: $bg_container;
     border-radius: 20px;
     padding: 28px 0;
     margin: 20px auto;
@@ -30,14 +33,14 @@
     &:hover {
         cursor: pointer;
     }
-}
+} 
 
 // Bouton "commander" du menu ---------------------
 
 .menu__btn {
     width: 50%;
     color: #FFF;
-    background: $color-2nd ;
+    background: $secondary-color ;
     margin: 30px 5px;
     padding: 20px 30px;
     border-radius: 30px;
@@ -46,8 +49,24 @@
     
     &:hover {
         opacity: 0.8;
-        box-shadow: 5px 5px 20px $color-2nd;
+        box-shadow: 5px 5px 20px $secondary-color;
         cursor: pointer;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 1;
+    }
+    40% {
+        opacity: 0.8;
+    }
+    80% {
+        opacity: 0.4;
+    }
+
+    100% {
+        opacity: 0;
     }
 }
 

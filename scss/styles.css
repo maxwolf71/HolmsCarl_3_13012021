@@ -7,18 +7,25 @@
 
 .reservation__btn {
   color: #FFF;
-  background: #FF79DA;
+  background: #9356DC;
   margin-top: 30px;
   padding: 15px 25px;
   border-radius: 30px;
   border: none;
+  -webkit-transition: background-color 5000ms ease-in-out, -webkit-transform 1000ms ease-in-out;
+  transition: background-color 5000ms ease-in-out, -webkit-transform 1000ms ease-in-out;
+  transition: transform 1000ms ease-in-out, background-color 5000ms ease-in-out;
+  transition: transform 1000ms ease-in-out, background-color 5000ms ease-in-out, -webkit-transform 1000ms ease-in-out;
 }
 
 .reservation__btn:hover {
   cursor: pointer;
   opacity: 0.8;
-  -webkit-box-shadow: 5px 5px 20px #FF79DA;
-          box-shadow: 5px 5px 20px #FF79DA;
+  -webkit-box-shadow: 5px 5px 20px #9356DC;
+          box-shadow: 5px 5px 20px #9356DC;
+  -webkit-transform: scale(1.8);
+          transform: scale(1.8);
+  background-color: #312f2f;
 }
 
 .selection__btn {
@@ -62,17 +69,34 @@
   cursor: pointer;
 }
 
-body {
-  font-family: 'Roboto', Arial, sans-serif;
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
-h1 {
-  font-family: 'Shrikhand', Arial, sans-serif;
-  font-size: 1.8rem;
-}
-
-h2 {
-  font-size: 1.5rem;
+@keyframes fadeIn {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 .top {
@@ -111,15 +135,15 @@ h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 18px;
+  padding: 1.2rem;
 }
 
 .top__search:hover {
-  background-color: #d1c5ba;
+  background-color: #f6f1f1;
 }
 
 .top__icon {
-  margin-right: 15px;
+  margin-right: 1rem;
 }
 
 .reservation {
@@ -138,7 +162,7 @@ h2 {
           flex-direction: column;
   text-align: center;
   background-color: #f6f1f1;
-  padding: 10%;
+  padding: 2rem;
 }
 
 .selection {
@@ -149,7 +173,7 @@ h2 {
   background-color: #9356DC;
   color: white;
   position: absolute;
-  left: 2%;
+  left: 0.5rem;
   border-radius: 50%;
   width: 34px;
   height: 34px;
@@ -163,16 +187,16 @@ h2 {
 
 .restaurants {
   background-color: #f6f1f1;
-  padding-top: 70px;
+  padding-top: 4rem;
 }
 
 .gallery {
-  padding: 10px;
+  padding: 0.8rem;
 }
 
 .gallery__card {
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 1.4rem;
 }
 
 .gallery a {
@@ -181,10 +205,10 @@ h2 {
 
 .gallery img {
   width: 100%;
-  height: 200px;
+  max-height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 18px 18px 0 0;
+  border-radius: 1.2rem 1.2rem 0 0;
 }
 
 .gallery__new {
@@ -213,51 +237,23 @@ h2 {
   border-radius: 0 0 20px 20px;
 }
 
-.gallery .far {
+.gallery__details .plain-heart {
+  position: absolute;
   font-size: 2rem;
 }
 
-.gallery .far:hover {
-  background-color: #FF79DA;
+.gallery__details .plain-heart:hover {
+  visibility: hidden;
 }
 
-.footer {
-  padding: 30px 20px;
-  background-color: #312f2f;
-  color: white;
-  line-height: 1.5;
+.gallery__details .color-heart {
+  color: #9356DC;
+  font-size: 2rem;
 }
 
-.footer__logo {
-  margin-bottom: 5%;
-}
-
-.footer__logo img {
-  width: 30%;
-  -webkit-filter: brightness(0) invert(1);
-          filter: brightness(0) invert(1);
-}
-
-.footer__item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.footer__item .fas {
-  margin-right: 10px;
-}
-
-.footer a {
-  color: white;
-  text-decoration: none;
-}
-
-.footer a a:hover {
-  cursor: pointer;
+.gallery__details .color-heart:hover {
+  -webkit-animation: fadeIn 2s ease-in-out;
+          animation: fadeIn 2s ease-in-out;
 }
 
 .image img {
@@ -338,5 +334,57 @@ h2 {
 
 .menu__items--card .price {
   font-weight: bold;
+}
+
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+}
+
+h1 {
+  font-family: 'Shrikhand', Arial, sans-serif;
+  font-size: 1.8rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+.footer {
+  padding: 30px 20px;
+  background-color: #312f2f;
+  color: white;
+  line-height: 1.5;
+}
+
+.footer__logo {
+  margin-bottom: 5%;
+}
+
+.footer__logo img {
+  width: 30%;
+  -webkit-filter: brightness(0) invert(1);
+          filter: brightness(0) invert(1);
+}
+
+.footer__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__item .fas {
+  margin-right: 10px;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer a a:hover {
+  cursor: pointer;
 }
 /*# sourceMappingURL=styles.css.map */
