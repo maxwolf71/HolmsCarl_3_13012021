@@ -1,0 +1,120 @@
+//------------------- LOGO + CITY SEARCH ---------------------------------
+
+.top {
+    @include flex_center;
+
+    &__logo {
+        padding: 1.2rem; 
+    }
+    &__logo img {
+        height: 1.8rem;
+    }
+    &__arrow--back {
+        position: absolute;
+        left: 20px;
+        color: black;
+    }
+
+    &__search {
+        @include flex_center;
+        padding: 1.2rem;
+        &:hover {
+            background-color: $bg_container;
+        }
+    }
+    &__icon {
+        margin-right: 1rem;
+    }
+}
+
+//------------------------ RESERVATION  --------------------------------
+
+.reservation {
+    @include flex_center;
+    flex-direction: column;
+    text-align: center;
+    background-color: $bg_container;
+    padding: 2rem;
+}
+
+//--------------------------  FONCTIONNEMENT  -------------------------------
+
+.selection {
+    margin: 50px 0;
+    
+    &__number {
+        background-color: $primary-color;
+        color: white;
+        position: absolute;
+        left: 0.5rem;
+
+        border-radius: 50%;
+        width: 34px;
+        height: 34px;
+        padding: 10px;
+        text-align: center;
+    }
+    & p {
+        font-weight: bold;
+    }
+}
+
+//------------------------ RESTAURANTS -------------------------
+.restaurants {
+    background-color: $bg_container;
+    padding-top: 4rem;
+}
+.gallery {
+    padding: 0.8rem;
+
+    &__card {
+        position: relative;
+        margin-bottom: 1.4rem;
+    }
+
+    & a {
+        text-decoration: none;
+    }
+    
+    & img {
+       width: 100%;
+       max-height: 200px;
+       object-fit: cover;
+       border-radius: 1.2rem 1.2rem 0 0;
+    }
+
+    &__new {
+        background-color: $bg-lightGreen;
+        color: green;
+        padding: 5px;
+        border-radius: 2px;
+        position: absolute;
+        top: 5%;
+        right: 5%;
+    }
+    &__details {
+        background-color: $bg-white;
+        color: black;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 0 0 20px 20px;
+        
+        & .plain-heart {
+            position: absolute;
+            font-size: 2rem;
+            &:hover {
+                visibility: hidden;
+            }    
+        }
+        & .color-heart {
+            color: $primary-color;
+            font-size: 2rem;
+        
+            &:hover {
+                animation: fadeIn 2s ease-in-out;
+            }
+        }
+    }
+}

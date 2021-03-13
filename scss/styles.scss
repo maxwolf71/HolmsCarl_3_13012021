@@ -1,5 +1,8 @@
 @import 'config';
 @import 'components';
+@import 'home';
+@import 'menu';
+@import 'responsive';
 
 body {
     font-family: 'Roboto', Arial, sans-serif;
@@ -14,124 +17,6 @@ h2 {
 }
 
 
-
-@mixin flex_center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-//------------------- LOGO + CITY SEARCH ---------------------------------
-
-.top {
-    @include flex_center;
-
-    &__logo {
-        padding: 1.2rem; 
-    }
-    &__logo img {
-        height: 1.8rem;
-    }
-    &__arrow--back {
-        position: absolute;
-        left: 20px;
-        color: black;
-    }
-
-    &__search {
-        @include flex_center;
-        padding: 18px;
-        &:hover {
-            background-color: rgb(209, 197, 186);
-        }
-    }
-    &__icon {
-        margin-right: 15px;
-    }
-}
-
-//------------------------ RESERVATION  --------------------------------
-
-.reservation {
-    @include flex_center;
-    flex-direction: column;
-    text-align: center;
-    background-color: $color-4th;
-    padding: 10%;
-}
-
-//--------------------------  FONCTIONNEMENT  -------------------------------
-
-.selection {
-    margin: 50px 0;
-    
-    &__number {
-        background-color: $color-1st;
-        color: white;
-        position: absolute;
-        left: 2%;
-
-        border-radius: 50%;
-        width: 34px;
-        height: 34px;
-        padding: 10px;
-        text-align: center;
-    }
-    & p {
-        font-weight: bold;
-    }
-}
-
-//------------------------ RESTAURANTS -------------------------
-.restaurants {
-    background-color: $color-4th;
-    padding-top: 70px;
-}
-.gallery {
-    padding: 10px;
-
-    &__card {
-        position: relative;
-        margin-bottom: 20px;
-    }
-
-    & a {
-        text-decoration: none;
-    }
-    
-    & img {
-       width: 100%;
-       height: 200px;
-       object-fit: cover;
-       border-radius: 18px 18px 0 0;
-    }
-
-    &__new {
-        background-color: $color-3rd;
-        color: green;
-        padding: 5px;
-        border-radius: 2px;
-        position: absolute;
-        top: 5%;
-        right: 5%;
-    }
-    &__details {
-        background-color: $color-5th;
-        color: black;
-        padding: 10px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-radius: 0 0 20px 20px;
-    }
-    & .far {
-        font-size: 2rem;
-        &:hover {
-            background-color: $color-2nd;
-        }
-    }
-  
-}
-
 //-------------------------- FOOTER  -------------------------------
 
 .footer {
@@ -143,11 +28,12 @@ h2 {
     &__logo {
         margin-bottom: 5%;
     }
-
+//-------------------------- FOOTER logo white -------------------------------
     &__logo img {
         width: 30%;
         filter: brightness(0) invert(1);
     }
+
     &__item {
         display: flex;
         align-items: center;
@@ -164,62 +50,4 @@ h2 {
         }
     }
    
-}
-
-//-------------------------- page menu A la française  -------------------------------
-
-.image img {
-    width: 100%;
-    position: relative;
-    z-index: 1;
-}
-
-.menu {
-    background-color: $color-4th;
-    border-radius: 30px 30px 0 0;
-    padding: 15px 10px;
-    position: relative;
-    top: -60px;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-
-    &__intro {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin: 20px 0;
-        & .far {
-            font-size: 2rem;
-            &:hover {
-                background-color: $color-2nd;
-            }
-        }
-    }
-    &__items {
-        .menu__line {
-            border: 2px solid $color-3rd;
-            width: 40px;
-            margin-top: 5px;
-        }
-        &--card {
-            background-color: $color-5th;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            margin: 10px 0;
-            border-radius: 15px;
-            padding: 3px;
-            .text {
-                flex-direction: column;
-                align-items: flex-start;
-                line-height: 1.4;
-            }
-            .price {
-                font-weight: bold;
-            }
-        }
-    }
-    
-
 }
