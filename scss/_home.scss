@@ -104,13 +104,17 @@
         & .plain-heart {
             position: absolute;
             font-size: 2rem;
+    
+
             &:hover {
-                visibility: hidden;
+                animation: fadeIn 2s ease-in-out;
             }    
         }
         & .color-heart {
             color: $primary-color;
             font-size: 2rem;
+            
+            opacity: 0;
         
             &:hover {
                 animation: fadeIn 2s ease-in-out;

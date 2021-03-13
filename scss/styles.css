@@ -71,31 +71,31 @@
 
 @-webkit-keyframes fadeIn {
   0% {
-    opacity: 1;
+    opacity: 0;
   }
   40% {
-    opacity: 0.8;
-  }
-  80% {
     opacity: 0.4;
   }
+  80% {
+    opacity: 0.8;
+  }
   100% {
-    opacity: 0;
+    opacity: 1;
   }
 }
 
 @keyframes fadeIn {
   0% {
-    opacity: 1;
+    opacity: 0;
   }
   40% {
-    opacity: 0.8;
-  }
-  80% {
     opacity: 0.4;
   }
+  80% {
+    opacity: 0.8;
+  }
   100% {
-    opacity: 0;
+    opacity: 1;
   }
 }
 
@@ -243,12 +243,14 @@
 }
 
 .gallery__details .plain-heart:hover {
-  visibility: hidden;
+  -webkit-animation: fadeIn 2s ease-in-out;
+          animation: fadeIn 2s ease-in-out;
 }
 
 .gallery__details .color-heart {
   color: #9356DC;
   font-size: 2rem;
+  opacity: 0;
 }
 
 .gallery__details .color-heart:hover {
