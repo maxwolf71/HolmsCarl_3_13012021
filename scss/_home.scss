@@ -101,23 +101,17 @@
         align-items: center;
         border-radius: 0 0 20px 20px;
         
-        & .plain-heart {
+        & .heart {
             position: absolute;
-            font-size: 2rem;
-    
-
-            &:hover {
-                animation: fadeIn 2s ease-in-out;
-            }    
+            font-size: 2rem;   
         }
         & .color-heart {
             color: $primary-color;
             font-size: 2rem;
-            
             opacity: 0;
         
             &:hover {
-                animation: fadeIn 2s ease-in-out;
+                animation: fadeIn 1s ease-in-out forwards;
             }
         }
     }
