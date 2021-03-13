@@ -54,20 +54,17 @@
     }
 }
 
-@keyframes fadeIn {
-    0% {
-        opacity: 1;
-    }
-    40% {
-        opacity: 0.8;
-    }
-    80% {
-        opacity: 0.4;
-    }
 
-    100% {
+// Coeur fade ---------------------
+
+@keyframes fadeIn {
+    from {
         opacity: 0;
     }
+    to {
+        opacity: 1;
+    }
 }
+
 
 
