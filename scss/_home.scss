@@ -103,20 +103,19 @@
         
         & .plain {
             position: absolute;
-            font-size: 2rem;   
+            font-size: 2rem; 
+            z-index: 1;  
 
-            &:hover {
-                visibility: hidden;
+            &:hover + .color {
+                animation: fadeIn 1s ease-in-out forwards;
+                visibility: visible;
             }
         }
         & .color {
             color: $primary-color;
             font-size: 2rem;
-            opacity: 0;
-        
-            &:hover {
-                animation: fadeIn 1s ease-in-out forwards;
-            }
+            z-index: 0;
+            visibility: hidden;
         }
     }
 }

@@ -23,18 +23,21 @@
             font-size: 2rem;
             position: absolute;
             right: 5%;
-       
+            z-index: 1;
+        
+            &:hover + .color{
+                animation: fadeIn 1s ease-in-out forwards;
+                visibility: visible;
+            }
+
         }
         & .color {
-            opacity: 0;
+            visibility: hidden;
             font-size: 2rem;
             color: $primary-color;
             position: absolute;
             right: 5%;
-            
-            &:hover {
-                animation: fadeIn 1s ease-in forwards;
-            }
+            z-index: 0;
         }
     }
 
@@ -54,8 +57,7 @@
 
             display: flex;
             justify-content: space-between;
-            
-
+        
             &:hover > .menu__items--checkbox {
                 visibility: visible;
                 animation: greenBox 1s ease-in-out forwards;
@@ -65,11 +67,15 @@
                 flex-direction: column;
                 align-items: flex-start;
                 line-height: 1.4;
+
+                animation: fadeInPage 2s ease-in-out;
     
             }
             & .price {
                 font-weight: bold;
                 align-self: flex-end;
+
+                animation: fadeInPage 4s ease-in-out;
             }
         }
         &--checkbox {

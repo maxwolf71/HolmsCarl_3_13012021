@@ -66,7 +66,7 @@
     }
 }
 
-// Coeur fade ---------------------
+// menu check bar ---------------------
 
 @keyframes greenBox {
     from {
@@ -78,4 +78,13 @@
     }
 }
 
+// page fade in ---------------------
 
+@keyframes fadeInPage {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

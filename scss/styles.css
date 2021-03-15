@@ -109,6 +109,24 @@
   }
 }
 
+@-webkit-keyframes fadeInPage {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInPage {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .top {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -250,21 +268,20 @@
 .gallery__details .plain {
   position: absolute;
   font-size: 2rem;
+  z-index: 1;
 }
 
-.gallery__details .plain:hover {
-  visibility: hidden;
+.gallery__details .plain:hover + .color {
+  -webkit-animation: fadeIn 1s ease-in-out forwards;
+          animation: fadeIn 1s ease-in-out forwards;
+  visibility: visible;
 }
 
 .gallery__details .color {
   color: #9356DC;
   font-size: 2rem;
-  opacity: 0;
-}
-
-.gallery__details .color:hover {
-  -webkit-animation: fadeIn 1s ease-in-out forwards;
-          animation: fadeIn 1s ease-in-out forwards;
+  z-index: 0;
+  visibility: hidden;
 }
 
 .image img {
@@ -305,19 +322,22 @@
   font-size: 2rem;
   position: absolute;
   right: 5%;
+  z-index: 1;
+}
+
+.menu__intro .plain:hover + .color {
+  -webkit-animation: fadeIn 1s ease-in-out forwards;
+          animation: fadeIn 1s ease-in-out forwards;
+  visibility: visible;
 }
 
 .menu__intro .color {
-  opacity: 0;
+  visibility: hidden;
   font-size: 2rem;
   color: #9356DC;
   position: absolute;
   right: 5%;
-}
-
-.menu__intro .color:hover {
-  -webkit-animation: fadeIn 1s ease-in forwards;
-          animation: fadeIn 1s ease-in forwards;
+  z-index: 0;
 }
 
 .menu__items--line {
@@ -354,12 +374,16 @@
       -ms-flex-align: start;
           align-items: flex-start;
   line-height: 1.4;
+  -webkit-animation: fadeInPage 2s ease-in-out;
+          animation: fadeInPage 2s ease-in-out;
 }
 
 .menu__items--card .price {
   font-weight: bold;
   -ms-flex-item-align: end;
       align-self: flex-end;
+  -webkit-animation: fadeInPage 4s ease-in-out;
+          animation: fadeInPage 4s ease-in-out;
 }
 
 .menu__items--checkbox {
