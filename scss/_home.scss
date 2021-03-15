@@ -101,11 +101,15 @@
         align-items: center;
         border-radius: 0 0 20px 20px;
         
-        & .heart {
+        & .plain {
             position: absolute;
             font-size: 2rem;   
+
+            &:hover {
+                visibility: hidden;
+            }
         }
-        & .color-heart {
+        & .color {
             color: $primary-color;
             font-size: 2rem;
             opacity: 0;

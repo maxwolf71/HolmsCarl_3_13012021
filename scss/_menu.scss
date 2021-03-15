@@ -18,11 +18,22 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin: 20px 0;
-        & .far {
+
+        & .plain {
             font-size: 2rem;
+            position: absolute;
+            right: 10px;
+       
+        }
+        & .color {
+            opacity: 0;
+            font-size: 2rem;
+            color: $primary-color;
+            position: absolute;
+            right: 10px;
+            
             &:hover {
-                background-color: $secondary-color;
+                animation: fadeIn 1s ease-in forwards;
             }
         }
     }
