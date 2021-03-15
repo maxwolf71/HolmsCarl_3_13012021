@@ -66,5 +66,16 @@
     }
 }
 
+// Coeur fade ---------------------
+
+@keyframes greenBox {
+    from {
+        transform: translateX(150px);
+    }
+    to{
+        transform: translateX(0px);
+    
+    }
+}
 
 

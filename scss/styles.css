@@ -87,6 +87,28 @@
   }
 }
 
+@-webkit-keyframes greenBox {
+  from {
+    -webkit-transform: translateX(150px);
+            transform: translateX(150px);
+  }
+  to {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes greenBox {
+  from {
+    -webkit-transform: translateX(150px);
+            transform: translateX(150px);
+  }
+  to {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
 .top {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -282,11 +304,7 @@
 .menu__intro .plain {
   font-size: 2rem;
   position: absolute;
-<<<<<<< HEAD
   right: 5%;
-=======
-  right: 10px;
->>>>>>> f15ed5e481ecf580960685cea8a69e41077f5526
 }
 
 .menu__intro .color {
@@ -294,11 +312,7 @@
   font-size: 2rem;
   color: #9356DC;
   position: absolute;
-<<<<<<< HEAD
   right: 5%;
-=======
-  right: 10px;
->>>>>>> f15ed5e481ecf580960685cea8a69e41077f5526
 }
 
 .menu__intro .color:hover {
@@ -306,26 +320,29 @@
           animation: fadeIn 1s ease-in forwards;
 }
 
-.menu__items .menu__line {
+.menu__items--line {
   border: 2px solid #99E2D0;
-  width: 40px;
-  margin-top: 5px;
+  width: 4rem;
+  margin: 5px 0;
 }
 
 .menu__items--card {
   background-color: #fff;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+  z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  margin: 10px 0;
-  border-radius: 15px;
-  padding: 3px;
+}
+
+.menu__items--card:hover > .menu__items--checkbox {
+  visibility: visible;
+  -webkit-animation: greenBox 1s ease-in-out forwards;
+          animation: greenBox 1s ease-in-out forwards;
 }
 
 .menu__items--card .text {
@@ -341,14 +358,32 @@
 
 .menu__items--card .price {
   font-weight: bold;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 
-.menu__items--card .checkbox {
-  background-color: orange;
+.menu__items--checkbox {
+  background-color: #99E2D0;
+  width: 25%;
+  height: 4rem;
+  border-radius: 0 15px 15px 0;
+  visibility: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.menu__items--card .check {
-  background-color: red;
+.menu__items--checkbox .fas {
+  background-color: white;
+  color: #99E2D0;
+  border-radius: 30px;
+  padding: 4px;
 }
 
 body {
