@@ -12,10 +12,10 @@
   padding: 15px 25px;
   border-radius: 30px;
   border: none;
-  -webkit-transition: background-color 5000ms ease-in-out, -webkit-transform 1000ms ease-in-out;
-  transition: background-color 5000ms ease-in-out, -webkit-transform 1000ms ease-in-out;
-  transition: transform 1000ms ease-in-out, background-color 5000ms ease-in-out;
-  transition: transform 1000ms ease-in-out, background-color 5000ms ease-in-out, -webkit-transform 1000ms ease-in-out;
+  -webkit-transition: background-color 3s ease-in-out, -webkit-transform 1s ease-in-out;
+  transition: background-color 3s ease-in-out, -webkit-transform 1s ease-in-out;
+  transition: transform 1s ease-in-out, background-color 3s ease-in-out;
+  transition: transform 1s ease-in-out, background-color 3s ease-in-out, -webkit-transform 1s ease-in-out;
 }
 
 .reservation__btn:hover {
@@ -23,8 +23,8 @@
   opacity: 0.8;
   -webkit-box-shadow: 5px 5px 20px #9356DC;
           box-shadow: 5px 5px 20px #9356DC;
-  -webkit-transform: scale(1.8);
-          transform: scale(1.8);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
   background-color: #312f2f;
 }
 

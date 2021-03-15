@@ -7,13 +7,13 @@
     padding: 15px 25px;
     border-radius: 30px;
     border: none;
-    transition: transform 1000ms ease-in-out, background-color 5000ms ease-in-out;
+    transition: transform 1s ease-in-out, background-color 3s ease-in-out;
 
     &:hover {
         cursor: pointer;
         opacity: 0.8;
         box-shadow: 5px 5px 20px $primary-color;
-        transform: scale(1.8);
+        transform: scale(1.2);
         background-color: $bg-footer;
     }
 }
