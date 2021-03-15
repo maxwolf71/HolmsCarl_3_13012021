@@ -376,13 +376,8 @@
       -ms-flex-align: start;
           align-items: flex-start;
   line-height: 1.4;
-<<<<<<< HEAD
   -webkit-animation: fadeInPage 3s ease-in-out;
           animation: fadeInPage 3s ease-in-out;
-=======
-  -webkit-animation: fadeInPage 2s ease-in-out;
-          animation: fadeInPage 2s ease-in-out;
->>>>>>> 939ce3117c59d5c2dbccc1e4de6b7408789f6595
 }
 
 .menu__items--card .price {
