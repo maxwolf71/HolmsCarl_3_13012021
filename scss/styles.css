@@ -282,7 +282,11 @@
 .menu__intro .plain {
   font-size: 2rem;
   position: absolute;
+<<<<<<< HEAD
   right: 5%;
+=======
+  right: 10px;
+>>>>>>> f15ed5e481ecf580960685cea8a69e41077f5526
 }
 
 .menu__intro .color {
@@ -290,7 +294,11 @@
   font-size: 2rem;
   color: #9356DC;
   position: absolute;
+<<<<<<< HEAD
   right: 5%;
+=======
+  right: 10px;
+>>>>>>> f15ed5e481ecf580960685cea8a69e41077f5526
 }
 
 .menu__intro .color:hover {
