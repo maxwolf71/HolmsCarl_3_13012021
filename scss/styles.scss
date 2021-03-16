@@ -29,6 +29,7 @@ h2 {
         margin-bottom: 5%;
     }
 //-------------------------- FOOTER logo white -------------------------------
+
     &__logo img {
         width: 30%;
         filter: brightness(0) invert(1);
@@ -38,7 +39,10 @@ h2 {
         display: flex;
         align-items: center;
         
-        & .fas {
+        & .fa-utensils {
+            margin-right: 15px;
+        }
+        & .fa-hands-helping {
             margin-right: 10px;
         }
     }

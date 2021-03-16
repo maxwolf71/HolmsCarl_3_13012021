@@ -1,8 +1,69 @@
-* {6
+* {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+.loader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.loader::after {
+  content: "";
+  width: 50px;
+  height: 50px;
+  border: 10px solid #9356DC;
+  border-top-color: #FF79DA;
+  border-bottom-color: #FF79DA;
+  border-radius: 50%;
+  -webkit-animation: loading 1s ease-in-out infinite;
+          animation: loading 1s ease-in-out infinite;
+}
+
+@-webkit-keyframes loading {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes loading {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes fullPage {
+  from {
+    visibility: visible;
+  }
+  to {
+    display: none;
+  }
+}
+
+@keyframes fullPage {
+  from {
+    visibility: visible;
+  }
+  to {
+    display: none;
+  }
 }
 
 .reservation__btn {
@@ -286,7 +347,9 @@
 
 .image img {
   width: 100%;
-  object-fit: cover;
+  max-height: 320px;
+  -o-object-fit: cover;
+     object-fit: cover;
   position: relative;
   z-index: 1;
 }
@@ -452,7 +515,11 @@ h2 {
           align-items: center;
 }
 
-.footer__item .fas {
+.footer__item .fa-utensils {
+  margin-right: 15px;
+}
+
+.footer__item .fa-hands-helping {
   margin-right: 10px;
 }
 
