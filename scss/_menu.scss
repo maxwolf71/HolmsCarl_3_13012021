@@ -23,26 +23,26 @@
 
         animation: fadeInPage 2s ease-in-out;
         
-
         & .plain {
-            font-size: 2rem;
+            font-size: 2rem; 
             position: absolute;
-            right: 5%;
-            z-index: 1;
-        
-            &:hover + .color{
-                animation: fadeIn 1s ease-in-out forwards;
-                visibility: visible;
-            }
+            right: 40px;
 
+            &:hover {
+                visibility: hidden;
+
+                &:hover + .color {
+                    animation: fadeIn 1s ease-in-out both;
+                    visibility: visible;
+                }
+            }  
         }
         & .color {
-            visibility: hidden;
-            font-size: 2rem;
             color: $primary-color;
+            font-size: 2rem;
+            visibility: hidden;
             position: absolute;
-            right: 5%;
-            z-index: 0;
+            right: 40px;
         }
     }
 
@@ -59,7 +59,7 @@
             border-radius: 15px;
             margin-bottom: 1rem;
             z-index: 1;
-
+            overflow: hidden;
             display: flex;
             justify-content: space-between;
         

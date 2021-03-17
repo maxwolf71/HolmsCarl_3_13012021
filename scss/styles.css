@@ -5,6 +5,16 @@
   padding: 0;
 }
 
+.bgLoader {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: #312f2f;
+  -webkit-animation: bgFade 3s both;
+          animation: bgFade 3s both;
+  display: none;
+}
+
 .loader {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -12,6 +22,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-top: 50%;
 }
 
 .loader::after {
@@ -22,8 +33,8 @@
   border-top-color: #FF79DA;
   border-bottom-color: #FF79DA;
   border-radius: 50%;
-  -webkit-animation: loading 1s ease-in-out infinite;
-          animation: loading 1s ease-in-out infinite;
+  -webkit-animation: loading 1s linear infinite;
+          animation: loading 1s linear infinite;
 }
 
 @-webkit-keyframes loading {
@@ -48,27 +59,26 @@
   }
 }
 
-@-webkit-keyframes fullPage {
-  from {
-    visibility: visible;
+@-webkit-keyframes bgFade {
+  0% {
   }
-  to {
-    display: none;
+  100% {
+    opacity: 0;
   }
 }
 
-@keyframes fullPage {
-  from {
-    visibility: visible;
+@keyframes bgFade {
+  0% {
   }
-  to {
-    display: none;
+  100% {
+    opacity: 0;
   }
 }
 
 .reservation__btn {
   color: #FFF;
-  background: #9356DC;
+  background: -webkit-gradient(linear, left top, left bottom, from(#c9abee), to(#9356DC));
+  background: linear-gradient(#c9abee, #9356DC);
   margin-top: 30px;
   padding: 15px 25px;
   border-radius: 30px;
@@ -86,7 +96,7 @@
           box-shadow: 5px 5px 20px #9356DC;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
-  background-color: #312f2f;
+  background-color: #ae80e5;
 }
 
 .selection__btn {
@@ -111,23 +121,30 @@
 }
 
 .menu__btn {
-  width: 50%;
   color: #FFF;
-  background: #FF79DA;
-  margin: 30px 5px;
-  padding: 20px 30px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#c9abee), to(#9356DC));
+  background: linear-gradient(#c9abee, #9356DC);
+  margin-top: 30px;
+  padding: 15px 25px;
   border-radius: 30px;
   border: none;
+  -webkit-transition: background-color 3s ease-in-out, -webkit-transform 1s ease-in-out;
+  transition: background-color 3s ease-in-out, -webkit-transform 1s ease-in-out;
+  transition: transform 1s ease-in-out, background-color 3s ease-in-out;
+  transition: transform 1s ease-in-out, background-color 3s ease-in-out, -webkit-transform 1s ease-in-out;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
 }
 
 .menu__btn:hover {
-  opacity: 0.8;
-  -webkit-box-shadow: 5px 5px 20px #FF79DA;
-          box-shadow: 5px 5px 20px #FF79DA;
   cursor: pointer;
+  opacity: 0.8;
+  -webkit-box-shadow: 5px 5px 20px #9356DC;
+          box-shadow: 5px 5px 20px #9356DC;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  background-color: #ae80e5;
 }
 
 @-webkit-keyframes fadeIn {
@@ -228,11 +245,8 @@
 }
 
 .top__search:hover {
-  background-color: #f6f1f1;
-}
-
-.top__icon {
-  margin-right: 1rem;
+  background-color: #ece1e1;
+  border-top: 2px solid #e2d2d2;
 }
 
 .reservation {
@@ -254,29 +268,45 @@
   padding: 2rem;
 }
 
-.selection {
-  margin: 50px 0;
+.reservation h2 {
+  margin-bottom: 10px;
 }
 
-.selection__number {
+.selection {
+  margin: 50px 15px;
+}
+
+.selection__btn {
+  position: relative;
+}
+
+.selection__btn:hover {
+  background-color: #e4d5f6;
+}
+
+.selection__btn:hover .fas {
+  color: #9356DC;
+}
+
+.selection__btn--number {
   background-color: #9356DC;
   color: white;
-  position: absolute;
-  left: 0.5rem;
   border-radius: 50%;
   width: 34px;
   height: 34px;
-  padding: 10px;
+  padding: 8px;
   text-align: center;
+  position: absolute;
+  left: -15px;
 }
 
-.selection p {
+.selection__btn p {
   font-weight: bold;
 }
 
 .restaurants {
   background-color: #f6f1f1;
-  padding-top: 4rem;
+  padding: 40px 15px;
 }
 
 .gallery {
@@ -329,19 +359,21 @@
 .gallery__details .plain {
   position: absolute;
   font-size: 2rem;
-  z-index: 1;
 }
 
-.gallery__details .plain:hover + .color {
-  -webkit-animation: fadeIn 1s ease-in-out forwards;
-          animation: fadeIn 1s ease-in-out forwards;
+.gallery__details .plain:hover {
+  visibility: hidden;
+}
+
+.gallery__details .plain:hover:hover + .color {
+  -webkit-animation: fadeIn 1s ease-in-out both;
+          animation: fadeIn 1s ease-in-out both;
   visibility: visible;
 }
 
 .gallery__details .color {
   color: #9356DC;
   font-size: 2rem;
-  z-index: 0;
   visibility: hidden;
 }
 
@@ -387,23 +419,25 @@
 .menu__intro .plain {
   font-size: 2rem;
   position: absolute;
-  right: 5%;
-  z-index: 1;
+  right: 40px;
 }
 
-.menu__intro .plain:hover + .color {
-  -webkit-animation: fadeIn 1s ease-in-out forwards;
-          animation: fadeIn 1s ease-in-out forwards;
+.menu__intro .plain:hover {
+  visibility: hidden;
+}
+
+.menu__intro .plain:hover:hover + .color {
+  -webkit-animation: fadeIn 1s ease-in-out both;
+          animation: fadeIn 1s ease-in-out both;
   visibility: visible;
 }
 
 .menu__intro .color {
-  visibility: hidden;
-  font-size: 2rem;
   color: #9356DC;
+  font-size: 2rem;
+  visibility: hidden;
   position: absolute;
-  right: 5%;
-  z-index: 0;
+  right: 40px;
 }
 
 .menu__items--line {
@@ -417,6 +451,7 @@
   border-radius: 15px;
   margin-bottom: 1rem;
   z-index: 1;
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
