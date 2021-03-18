@@ -28,13 +28,14 @@
             font-size: 2rem;
             position: absolute;
             right: 5%;
-            z-index: 1;
-        
-            &:hover + .color{
-                animation: fadeIn 1s ease-in-out forwards;
-                visibility: visible;
+            
+            &:hover {
+                visibility: hidden;
+                &:hover + .color{
+                    animation: fadeIn 1s ease-in-out forwards;
+                    visibility: visible;
+                }
             }
-
         }
         & .color {
             visibility: hidden;
@@ -42,7 +43,7 @@
             color: $primary-color;
             position: absolute;
             right: 5%;
-            z-index: 0;
+            
         }
     }
 
@@ -58,12 +59,14 @@
             background-color: $bg-white;
             border-radius: 15px;
             margin-bottom: 1rem;
+            padding: 5px 0 0 5px;
             z-index: 1;
+            overflow: hidden;
 
             display: flex;
             justify-content: space-between;
         
-            &:hover > .menu__items--checkbox {
+            &:hover > .checkbox {
                 visibility: visible;
                 animation: greenBox 2s ease-in-out forwards;
             }
@@ -82,24 +85,22 @@
 
                 animation: fadeInPage 4s ease-in-out;
             }
-        }
-        &--checkbox {
-            background-color: $bg-lightGreen;
-            width: 25%;
-            height: 4rem;
-            border-radius: 0 15px 15px 0;
-            visibility: hidden;
-            
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            .fas {
-                background-color: white;
-                color: $bg-lightGreen;
-                border-radius: 30px;
-                padding: 4px;
+            & .checkbox {
+                background-color: $bg-lightGreen;
+                width: 25%;
+                height: 4rem;
+                border-radius: 0 15px 15px 0;
+                
+                display: flex;
+                justify-content: center;
+                align-items: center;
+    
+                .fas {
+                    background-color: white;
+                    color: $bg-lightGreen;
+                    border-radius: 30px;
+                    padding: 4px;
+                }
             }
         }
     }
