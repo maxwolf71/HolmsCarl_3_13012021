@@ -24,7 +24,6 @@
         animation: fadeInPage 2s ease-in-out;
         
         & .plain {
-            font-size: 2rem; 
             position: absolute;
             right: 20px;
 
@@ -40,7 +39,6 @@
         }
         & .color {
             color: $primary-color;
-            font-size: 2rem;
             visibility: hidden;
             position: absolute;
             right: 20px;
