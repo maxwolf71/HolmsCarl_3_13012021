@@ -358,7 +358,6 @@
 
 .gallery__details .plain {
   position: absolute;
-  font-size: 2rem;
 }
 
 .gallery__details .plain:hover {
@@ -373,7 +372,6 @@
 
 .gallery__details .color {
   color: #9356DC;
-  font-size: 2rem;
   visibility: hidden;
 }
 
