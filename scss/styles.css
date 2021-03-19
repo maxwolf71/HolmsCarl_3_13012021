@@ -565,11 +565,6 @@ a {
           animation: greenBox 0.8s ease-in-out both;
 }
 
-.menu .list .card:hover > .price {
-  -webkit-animation: moveOver 0.8s ease-in-out both;
-          animation: moveOver 0.8s ease-in-out both;
-}
-
 .menu .list .text {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
