@@ -100,32 +100,32 @@
             border-radius: 15px;
             margin-bottom: 15px;
             display: flex;
-            justify-content: space-between;
+            
             overflow: hidden;
 
             &:hover > .checkbox {
-                visibility: visible;
+                animation: greenBox 1s ease-in-out forwards;
+            }    
+            &:hover > .price {
                 animation: greenBox 1s ease-in-out forwards;
             }    
         }
         .text {
             line-height: 1.4;
             white-space: nowrap;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
+            padding: 10px;
         }
         .price {
             font-weight: bold;
-            padding: 10px 0;
             width: 100%;
             display: flex;
             justify-content: flex-end;
+            align-items: flex-end;
             align-self: flex-end;
         }    
         .checkbox {
             background-color: $bg-lightGreen;
-            width: 15%;
+            
             border-radius: 0 15px 15px 0;
             margin-left: 15px;
             display: flex;
