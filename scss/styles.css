@@ -603,6 +603,7 @@ a {
       -ms-flex-pack: justify;
           justify-content: space-between;
   overflow: hidden;
+  position: relative;
 }
 
 .menu .list .card:hover > .checkbox {

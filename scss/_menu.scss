@@ -103,13 +103,11 @@
             display: flex;
             justify-content: space-between;
             overflow: hidden;
+            position: relative;
 
             &:hover > .checkbox {
                 visibility: visible;
                 animation: greenBox 1s ease-in-out forwards;
-            }  
-            &:hover > .price {
-                //animation: moveOver 1s ease-in-out forwards;
             }    
         }
         .text {
