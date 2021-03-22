@@ -555,6 +555,24 @@ a {
   }
 }
 
+<<<<<<< HEAD
+=======
+.menu .list .starters .card {
+  -webkit-animation: fadeInPage 5s ease-in-out both;
+          animation: fadeInPage 5s ease-in-out both;
+}
+
+.menu .list .meals .card {
+  -webkit-animation: fadeInPage 3s ease-in-out both;
+          animation: fadeInPage 3s ease-in-out both;
+}
+
+.menu .list .desserts .card {
+  -webkit-animation: fadeInPage 1s ease-in-out both;
+          animation: fadeInPage 1s ease-in-out both;
+}
+
+>>>>>>> 28b79fc2225f10596a0e4d0f984a3ddc02439453
 .menu .list h2 {
   font-size: 1rem;
   text-transform: uppercase;
