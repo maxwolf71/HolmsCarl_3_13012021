@@ -486,17 +486,13 @@ a {
   position: relative;
   top: -60px;
   z-index: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
 @media (min-width: 768px) {
   .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -559,21 +555,6 @@ a {
   }
 }
 
-.menu .list .starters .card {
-  -webkit-animation: fadeInPage 5s ease-in-out both;
-          animation: fadeInPage 5s ease-in-out both;
-}
-
-.menu .list .meals .card {
-  -webkit-animation: fadeInPage 3s ease-in-out both;
-          animation: fadeInPage 3s ease-in-out both;
-}
-
-.menu .list .desserts .card {
-  -webkit-animation: fadeInPage 1s ease-in-out both;
-          animation: fadeInPage 1s ease-in-out both;
-}
-
 .menu .list h2 {
   font-size: 1rem;
   text-transform: uppercase;
@@ -603,7 +584,6 @@ a {
       -ms-flex-pack: justify;
           justify-content: space-between;
   overflow: hidden;
-  position: relative;
 }
 
 .menu .list .card:hover > .checkbox {
@@ -613,18 +593,30 @@ a {
 }
 
 .menu .list .text {
+  line-height: 1.4;
+  white-space: nowrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 10px;
-  line-height: 1.4;
-  white-space: nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .menu .list .price {
   font-weight: bold;
   padding: 10px 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   -ms-flex-item-align: end;
       align-self: flex-end;
 }
@@ -633,6 +625,7 @@ a {
   background-color: #99E2D0;
   width: 15%;
   border-radius: 0 15px 15px 0;
+  margin-left: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -642,7 +635,6 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  visibility: hidden;
 }
 
 .menu .list .checkbox .fas {

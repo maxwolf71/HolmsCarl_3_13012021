@@ -13,10 +13,9 @@
     position: relative;
     top: -60px;
     z-index: 1;
-    display: flex;
-    flex-direction: column; 
 
     @media (min-width: 768px) {
+        display: flex;
         flex-direction: row;
         justify-content: space-around;
     }
@@ -66,17 +65,17 @@
     .list {
         & .starters {
             .card {
-                animation: fadeInPage 5s ease-in-out both;
+                //animation: fadeInPage 5s ease-in-out both;
             }
         }
         & .meals {
             .card {
-                animation: fadeInPage 3s ease-in-out both;
+                //animation: fadeInPage 3s ease-in-out both;
             } 
         }
         & .desserts {
             .card {
-                animation: fadeInPage 1s ease-in-out both;
+               // animation: fadeInPage 1s ease-in-out both;
             }
         }
       
@@ -103,7 +102,6 @@
             display: flex;
             justify-content: space-between;
             overflow: hidden;
-            position: relative;
 
             &:hover > .checkbox {
                 visibility: visible;
@@ -111,25 +109,29 @@
             }    
         }
         .text {
-            flex-direction: column;
-            padding: 10px;
             line-height: 1.4;
-            
             white-space: nowrap;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
         }
         .price {
             font-weight: bold;
             padding: 10px 0;
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
             align-self: flex-end;
         }    
         .checkbox {
             background-color: $bg-lightGreen;
             width: 15%;
             border-radius: 0 15px 15px 0;
+            margin-left: 15px;
             display: flex;
             justify-content: center;
             align-items: center;
-            visibility: hidden;
+            
 
             .fas {
                 background-color: white;
