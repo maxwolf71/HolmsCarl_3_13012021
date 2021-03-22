@@ -26,7 +26,7 @@
         justify-content: space-between;
         align-items: center;
     
-        animation: fadeInPage 2s ease-in-out;
+       
         
         & .plain {
             position: absolute;
@@ -38,10 +38,10 @@
                 font-size: 2rem;
             }
 
-            &:hover {
+            &:active {
                 visibility: hidden;
 
-                &:hover + .color {
+                &:active + .color {
                     animation: fadeIn 1s ease-in-out both;
                     visibility: visible;
                 }
@@ -63,6 +63,31 @@
     }
 
     .list {
+        & .starters {
+            .text {
+                animation: fadeInPage 5s ease-in-out both;
+            }
+            .price {
+                animation: fadeInPage 5s ease-in-out both 1s;
+            } 
+        }
+        & .meals {
+            .text {
+                animation: fadeInPage 3s ease-in-out both;
+            }
+            .price {
+                animation: fadeInPage 3s ease-in-out both 2s;
+            } 
+        }
+        & .desserts {
+            .text {
+                animation: fadeInPage 1s ease-in-out both;
+            }
+            .price {
+                animation: fadeInPage 1s ease-in-out both 1.5s;
+            } 
+        }
+      
         & h2 {
             font-size: 1rem;
             text-transform: uppercase;
@@ -84,14 +109,15 @@
             display: flex;
             justify-content: space-between;
             overflow: hidden;
+            position: relative;
 
             &:hover > .checkbox {
                 visibility: visible;
-                animation: greenBox 0.8s ease-in-out both;
+                animation: greenBox 1s ease-in-out forwards;
             }  
             &:hover > .price {
-                //animation: moveOver 0.8s ease-in-out both;
-            }  
+                animation: moveOver 1s ease-in-out forwards;
+            }    
         }
         .text {
             flex-direction: column;
@@ -99,13 +125,11 @@
             line-height: 1.4;
             padding: 2px;
             white-space: nowrap;
-            animation: fadeInPage 3s ease-in-out;
         }
         .price {
             font-weight: bold;
             align-self: flex-end;
-            
-        }
+        }    
         .checkbox {
             background-color: $bg-lightGreen;
             width: 15%;

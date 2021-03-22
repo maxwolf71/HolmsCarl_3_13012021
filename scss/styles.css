@@ -17,7 +17,6 @@ a {
   -webkit-animation: bgFade 3s both;
           animation: bgFade 3s both;
   z-index: 2;
-  display: none;
 }
 
 .loader {
@@ -180,6 +179,7 @@ a {
   to {
     -webkit-transform: translateX(0px);
             transform: translateX(0px);
+    visibility: visible;
   }
 }
 
@@ -191,46 +191,75 @@ a {
   to {
     -webkit-transform: translateX(0px);
             transform: translateX(0px);
+    visibility: visible;
   }
 }
 
 @-webkit-keyframes moveOver {
   from {
-    -webkit-transform: translate(0%);
-            transform: translate(0%);
+    -webkit-transform: translateX(150px);
+            transform: translateX(150px);
   }
   to {
-    -webkit-transform: translate(-200%);
-            transform: translate(-200%);
+    -webkit-transform: translateX(70px);
+            transform: translateX(70px);
   }
 }
 
 @keyframes moveOver {
   from {
-    -webkit-transform: translate(0%);
-            transform: translate(0%);
+    -webkit-transform: translateX(150px);
+            transform: translateX(150px);
   }
   to {
-    -webkit-transform: translate(-200%);
-            transform: translate(-200%);
+    -webkit-transform: translateX(70px);
+            transform: translateX(70px);
   }
 }
 
 @-webkit-keyframes fadeInPage {
-  from {
+  0% {
     opacity: 0;
+    margin-left: 35px;
   }
-  to {
+  25% {
+    opacity: 0.2;
+    margin-left: 30px;
+  }
+  50% {
+    opacity: 0.4;
+    margin-left: 25px;
+  }
+  75% {
+    opacity: 0.8;
+    margin-left: 20px;
+  }
+  100% {
     opacity: 1;
+    margin-left: 15px;
   }
 }
 
 @keyframes fadeInPage {
-  from {
+  0% {
     opacity: 0;
+    margin-left: 35px;
   }
-  to {
+  25% {
+    opacity: 0.2;
+    margin-left: 30px;
+  }
+  50% {
+    opacity: 0.4;
+    margin-left: 25px;
+  }
+  75% {
+    opacity: 0.8;
+    margin-left: 20px;
+  }
+  100% {
     opacity: 1;
+    margin-left: 15px;
   }
 }
 
@@ -487,8 +516,6 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-animation: fadeInPage 2s ease-in-out;
-          animation: fadeInPage 2s ease-in-out;
 }
 
 .menu .intro .plain {
@@ -504,11 +531,11 @@ a {
   }
 }
 
-.menu .intro .plain:hover {
+.menu .intro .plain:active {
   visibility: hidden;
 }
 
-.menu .intro .plain:hover:hover + .color {
+.menu .intro .plain:active:active + .color {
   -webkit-animation: fadeIn 1s ease-in-out both;
           animation: fadeIn 1s ease-in-out both;
   visibility: visible;
@@ -527,6 +554,36 @@ a {
     top: 20%;
     font-size: 2rem;
   }
+}
+
+.menu .list .starters .text {
+  -webkit-animation: fadeInPage 5s ease-in-out both;
+          animation: fadeInPage 5s ease-in-out both;
+}
+
+.menu .list .starters .price {
+  -webkit-animation: fadeInPage 5s ease-in-out both 1s;
+          animation: fadeInPage 5s ease-in-out both 1s;
+}
+
+.menu .list .meals .text {
+  -webkit-animation: fadeInPage 3s ease-in-out both;
+          animation: fadeInPage 3s ease-in-out both;
+}
+
+.menu .list .meals .price {
+  -webkit-animation: fadeInPage 3s ease-in-out both 2s;
+          animation: fadeInPage 3s ease-in-out both 2s;
+}
+
+.menu .list .desserts .text {
+  -webkit-animation: fadeInPage 1s ease-in-out both;
+          animation: fadeInPage 1s ease-in-out both;
+}
+
+.menu .list .desserts .price {
+  -webkit-animation: fadeInPage 1s ease-in-out both 1.5s;
+          animation: fadeInPage 1s ease-in-out both 1.5s;
 }
 
 .menu .list h2 {
@@ -557,12 +614,18 @@ a {
       -ms-flex-pack: justify;
           justify-content: space-between;
   overflow: hidden;
+  position: relative;
 }
 
 .menu .list .card:hover > .checkbox {
   visibility: visible;
-  -webkit-animation: greenBox 0.8s ease-in-out both;
-          animation: greenBox 0.8s ease-in-out both;
+  -webkit-animation: greenBox 1s ease-in-out forwards;
+          animation: greenBox 1s ease-in-out forwards;
+}
+
+.menu .list .card:hover > .price {
+  -webkit-animation: moveOver 1s ease-in-out forwards;
+          animation: moveOver 1s ease-in-out forwards;
 }
 
 .menu .list .text {
@@ -574,8 +637,6 @@ a {
   line-height: 1.4;
   padding: 2px;
   white-space: nowrap;
-  -webkit-animation: fadeInPage 3s ease-in-out;
-          animation: fadeInPage 3s ease-in-out;
 }
 
 .menu .list .price {
