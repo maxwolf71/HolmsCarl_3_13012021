@@ -516,7 +516,10 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+<<<<<<< HEAD
   padding-bottom: 40px;
+=======
+>>>>>>> ddf7183f475c0f600a07dedaad5b67cf893b3a4a
 }
 
 .menu .intro .plain {
@@ -559,21 +562,51 @@ a {
   }
 }
 
+<<<<<<< HEAD
 .menu .list .starters .card {
+=======
+.menu .list .starters .text {
+>>>>>>> ddf7183f475c0f600a07dedaad5b67cf893b3a4a
   -webkit-animation: fadeInPage 5s ease-in-out both;
           animation: fadeInPage 5s ease-in-out both;
 }
 
+<<<<<<< HEAD
 .menu .list .meals .card {
+=======
+.menu .list .starters .price {
+  -webkit-animation: fadeInPage 5s ease-in-out both 1s;
+          animation: fadeInPage 5s ease-in-out both 1s;
+}
+
+.menu .list .meals .text {
+>>>>>>> ddf7183f475c0f600a07dedaad5b67cf893b3a4a
   -webkit-animation: fadeInPage 3s ease-in-out both;
           animation: fadeInPage 3s ease-in-out both;
 }
 
+<<<<<<< HEAD
 .menu .list .desserts .card {
+=======
+.menu .list .meals .price {
+  -webkit-animation: fadeInPage 3s ease-in-out both 2s;
+          animation: fadeInPage 3s ease-in-out both 2s;
+}
+
+.menu .list .desserts .text {
+>>>>>>> ddf7183f475c0f600a07dedaad5b67cf893b3a4a
   -webkit-animation: fadeInPage 1s ease-in-out both;
           animation: fadeInPage 1s ease-in-out both;
 }
 
+<<<<<<< HEAD
+=======
+.menu .list .desserts .price {
+  -webkit-animation: fadeInPage 1s ease-in-out both 1.5s;
+          animation: fadeInPage 1s ease-in-out both 1.5s;
+}
+
+>>>>>>> ddf7183f475c0f600a07dedaad5b67cf893b3a4a
 .menu .list h2 {
   font-size: 1rem;
   text-transform: uppercase;
@@ -603,12 +636,21 @@ a {
       -ms-flex-pack: justify;
           justify-content: space-between;
   overflow: hidden;
+  position: relative;
 }
 
 .menu .list .card:hover > .checkbox {
   visibility: visible;
   -webkit-animation: greenBox 1s ease-in-out forwards;
           animation: greenBox 1s ease-in-out forwards;
+<<<<<<< HEAD
+=======
+}
+
+.menu .list .card:hover > .price {
+  -webkit-animation: moveOver 1s ease-in-out forwards;
+          animation: moveOver 1s ease-in-out forwards;
+>>>>>>> ddf7183f475c0f600a07dedaad5b67cf893b3a4a
 }
 
 .menu .list .text {
