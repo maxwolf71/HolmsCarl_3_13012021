@@ -571,14 +571,18 @@ a {
   overflow: hidden;
 }
 
-.menu .list .card:hover > .checkbox {
+.menu .list .card:hover > .price {
   -webkit-animation: greenBox 1s ease-in-out forwards;
           animation: greenBox 1s ease-in-out forwards;
 }
 
-.menu .list .card:hover > .price {
-  -webkit-animation: greenBox 1s ease-in-out forwards;
-          animation: greenBox 1s ease-in-out forwards;
+.menu .list .card:hover > .checkbox .fas {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
 }
 
 .menu .list .text {

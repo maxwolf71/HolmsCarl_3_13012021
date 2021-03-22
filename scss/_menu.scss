@@ -103,10 +103,14 @@
             overflow: hidden;
 
             &:hover > .checkbox {
-                animation: greenBox 1s ease-in-out forwards;
+                
             }    
             &:hover > .price {
                 animation: greenBox 1s ease-in-out forwards;
+            }    
+            &:hover > .checkbox .fas {
+                transform: rotate(360deg);
+                transition: transform 0.5s ease-in-out;
             }    
         }
         .text {
