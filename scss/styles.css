@@ -9,11 +9,15 @@ a {
   text-decoration: none;
 }
 
+.plain, .color {
+  font-size: 1.8rem;
+}
+
 .bgLoader {
   width: 100%;
   height: 100%;
   position: fixed;
-  background-color: #fff;
+  background-color: #312f2f;
   -webkit-animation: bgFade 3s both;
           animation: bgFade 3s both;
   z-index: 2;
@@ -200,21 +204,13 @@ a {
     opacity: 0;
     margin-left: 35px;
   }
-  25% {
-    opacity: 0.2;
-    margin-left: 30px;
-  }
   50% {
     opacity: 0.4;
     margin-left: 25px;
   }
-  75% {
-    opacity: 0.8;
-    margin-left: 20px;
-  }
   100% {
     opacity: 1;
-    margin-left: 15px;
+    margin-left: 10px;
   }
 }
 
@@ -223,21 +219,13 @@ a {
     opacity: 0;
     margin-left: 35px;
   }
-  25% {
-    opacity: 0.2;
-    margin-left: 30px;
-  }
   50% {
     opacity: 0.4;
     margin-left: 25px;
   }
-  75% {
-    opacity: 0.8;
-    margin-left: 20px;
-  }
   100% {
     opacity: 1;
-    margin-left: 15px;
+    margin-left: 10px;
   }
 }
 
@@ -464,6 +452,15 @@ a {
   position: relative;
   top: -60px;
   z-index: 1;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 @media (min-width: 768px) {
@@ -496,7 +493,6 @@ a {
 .menu .intro .plain {
   position: absolute;
   right: 30px;
-  font-size: 1.8rem;
 }
 
 @media (min-width: 768px) {
@@ -520,7 +516,6 @@ a {
 .menu .intro .color {
   color: #9356DC;
   visibility: hidden;
-  font-size: 1.8rem;
   position: absolute;
   right: 30px;
 }
@@ -531,6 +526,21 @@ a {
     top: 20%;
     font-size: 2rem;
   }
+}
+
+.menu .list .starters .card {
+  -webkit-animation: fadeInPage 3s ease-in-out both;
+          animation: fadeInPage 3s ease-in-out both;
+}
+
+.menu .list .meals .card {
+  -webkit-animation: fadeInPage 2s ease-in-out both;
+          animation: fadeInPage 2s ease-in-out both;
+}
+
+.menu .list .desserts .card {
+  -webkit-animation: fadeInPage 1s ease-in-out both;
+          animation: fadeInPage 1s ease-in-out both;
 }
 
 .menu .list h2 {
@@ -574,6 +584,7 @@ a {
 .menu .list .text {
   line-height: 1.4;
   white-space: nowrap;
+  overflow-wrap: ellipsis;
   padding: 10px;
 }
 
@@ -586,9 +597,9 @@ a {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .menu .list .checkbox {

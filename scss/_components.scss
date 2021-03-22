@@ -4,7 +4,7 @@
     width: 100%;
     height: 100%;
     position: fixed;
-    background-color: $bg-white;
+    background-color: $bg_footer;
     animation: bgFade 3s both;
     z-index: 2;
 }
@@ -99,13 +99,13 @@
 @keyframes greenBox {
     from {
         transform: translateX(150px);
-
     }
     to{
         transform: translateX(0px);
         visibility: visible;
     }
 }
+
 
 // page fade in ---------------------
 
@@ -114,20 +114,12 @@
         opacity: 0;
         margin-left: 35px;
     }
-    25% {
-        opacity: 0.2;
-        margin-left: 30px;
-    }
     50% {
         opacity: 0.4;
         margin-left: 25px;
     }
-    75% {
-        opacity: 0.8;
-        margin-left: 20px;
-    }
     100% {
         opacity: 1;
-        margin-left: 15px;
+        margin-left: 10px;
     }
 }

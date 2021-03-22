@@ -13,6 +13,9 @@ $bg-footer: rgb(49, 47, 47);
 a {
     text-decoration: none;
 }
+.plain, .color {
+    font-size: 1.8rem;
+}
 
 
 @mixin flex_center {
