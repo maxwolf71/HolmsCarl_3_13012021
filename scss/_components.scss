@@ -99,28 +99,43 @@
 @keyframes greenBox {
     from {
         transform: translateX(150px);
+
     }
     to{
         transform: translateX(0px);
-    
+        visibility: visible;
     }
 }
 @keyframes moveOver {
     from {
-        transform: translate(0%);
+        transform: translateX(150px);
     }
     to{
-        transform: translate(-200%);
+        transform: translateX(70px);
     }
 }
 
 // page fade in ---------------------
 
 @keyframes fadeInPage {
-    from {
+    0% {
         opacity: 0;
+        margin-left: 35px;
     }
-    to {
+    25% {
+        opacity: 0.2;
+        margin-left: 30px;
+    }
+    50% {
+        opacity: 0.4;
+        margin-left: 25px;
+    }
+    75% {
+        opacity: 0.8;
+        margin-left: 20px;
+    }
+    100% {
         opacity: 1;
+        margin-left: 15px;
     }
 }
