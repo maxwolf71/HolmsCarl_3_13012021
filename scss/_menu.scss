@@ -12,9 +12,10 @@
     position: relative;
     top: -60px;
     z-index: 1;
-    align-content: center;
+    
     display: flex;
     flex-direction: column;
+    align-content: center;
 
     @media (min-width: 768px) {
         display: flex;
@@ -99,11 +100,11 @@
             border-radius: 15px;
             margin-bottom: 15px;
             display: flex;
-            
+            justify-content: space-between;
             overflow: hidden;
 
             &:hover > .checkbox {
-                
+                animation: greenBox 1s ease-in-out forwards;
             }    
             &:hover > .price {
                 animation: greenBox 1s ease-in-out forwards;
@@ -129,13 +130,13 @@
         }    
         .checkbox {
             background-color: $bg-lightGreen;
-            
             border-radius: 0 15px 15px 0;
             margin-left: 15px;
             display: flex;
             justify-content: center;
             align-items: center;
-
+            visibility: hidden;
+           
             .fas {
                 background-color: white;
                 color: $bg-lightGreen;

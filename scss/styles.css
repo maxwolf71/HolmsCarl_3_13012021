@@ -452,8 +452,6 @@ a {
   position: relative;
   top: -60px;
   z-index: 1;
-  -ms-flex-line-pack: center;
-      align-content: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -461,6 +459,8 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 @media (min-width: 768px) {
@@ -568,7 +568,15 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   overflow: hidden;
+}
+
+.menu .list .card:hover > .checkbox {
+  -webkit-animation: greenBox 1s ease-in-out forwards;
+          animation: greenBox 1s ease-in-out forwards;
 }
 
 .menu .list .card:hover > .price {
@@ -619,6 +627,7 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  visibility: hidden;
 }
 
 .menu .list .checkbox .fas {
