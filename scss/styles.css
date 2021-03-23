@@ -34,17 +34,6 @@
     visibility: visible;
   }
   to {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 36c0b35a8f07fb03c23d8d6ceb138ef4810e643b
->>>>>>> edde3ac6d67a8ed1c01e145a0b9908cd71c791c5
-=======
->>>>>>> 36c0b35a8f07fb03c23d8d6ceb138ef4810e643b
->>>>>>> edde3ac6d67a8ed1c01e145a0b9908cd71c791c5
     visibility: hidden;
   }
 }
@@ -113,20 +102,6 @@
 @keyframes fadeInPage {
   0% {
     opacity: 0;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> b357580b353cf94e355b74405371616b81f4c482
->>>>>>> 36c0b35a8f07fb03c23d8d6ceb138ef4810e643b
->>>>>>> edde3ac6d67a8ed1c01e145a0b9908cd71c791c5
-=======
-=======
->>>>>>> b357580b353cf94e355b74405371616b81f4c482
->>>>>>> 36c0b35a8f07fb03c23d8d6ceb138ef4810e643b
->>>>>>> edde3ac6d67a8ed1c01e145a0b9908cd71c791c5
     visibility: hidden;
   }
   25% {
@@ -624,17 +599,6 @@ h2 {
 }
 
 .menu .list .starters .text {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 36c0b35a8f07fb03c23d8d6ceb138ef4810e643b
->>>>>>> edde3ac6d67a8ed1c01e145a0b9908cd71c791c5
-=======
->>>>>>> 36c0b35a8f07fb03c23d8d6ceb138ef4810e643b
->>>>>>> edde3ac6d67a8ed1c01e145a0b9908cd71c791c5
   -webkit-animation: fadeInPage 5s linear both;
           animation: fadeInPage 5s linear both;
 }
@@ -642,32 +606,11 @@ h2 {
 .menu .list .meals .text {
   -webkit-animation: fadeInPage 3s linear both;
           animation: fadeInPage 3s linear both;
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 
 .menu .list .desserts .text {
   -webkit-animation: fadeInPage 1s linear both;
           animation: fadeInPage 1s linear both;
-=======
-<<<<<<< HEAD
-=======
->>>>>>> edde3ac6d67a8ed1c01e145a0b9908cd71c791c5
-=======
-=======
-  -webkit-animation: fadeInPage 3s linear both;
-          animation: fadeInPage 3s linear both;
-}
-
-.menu .list .meals .text {
-  -webkit-animation: fadeInPage 2s linear both;
-          animation: fadeInPage 2s linear both;
->>>>>>> b357580b353cf94e355b74405371616b81f4c482
->>>>>>> 36c0b35a8f07fb03c23d8d6ceb138ef4810e643b
-<<<<<<< HEAD
->>>>>>> edde3ac6d67a8ed1c01e145a0b9908cd71c791c5
-=======
->>>>>>> edde3ac6d67a8ed1c01e145a0b9908cd71c791c5
 }
 
 .menu .list .desserts .text {
@@ -703,24 +646,9 @@ h2 {
       -ms-flex-pack: justify;
           justify-content: space-between;
   overflow: hidden;
-<<<<<<< HEAD
 }
 
-<<<<<<< HEAD
 .menu .list .card:hover .price {
-  -webkit-animation: greenBox 1s ease-in-out both;
-          animation: greenBox 1s ease-in-out both;
-}
-
-.menu .list .card:hover > .checkbox {
-  -webkit-animation: greenBox 1s ease-in-out both;
-          animation: greenBox 1s ease-in-out both;
-=======
-=======
-}
-
->>>>>>> edde3ac6d67a8ed1c01e145a0b9908cd71c791c5
-.menu .list .card:hover > .price {
   -webkit-animation: greenBox 1s ease-in-out forwards;
           animation: greenBox 1s ease-in-out forwards;
 }
@@ -728,7 +656,6 @@ h2 {
 .menu .list .card:hover > .checkbox {
   -webkit-animation: greenBox 1s ease-in-out forwards;
           animation: greenBox 1s ease-in-out forwards;
->>>>>>> edde3ac6d67a8ed1c01e145a0b9908cd71c791c5
 }
 
 .menu .list .card:hover > .checkbox .fas {
@@ -754,14 +681,6 @@ h2 {
   line-height: 1.4;
   padding: 10px;
   white-space: nowrap;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  width: 350px;
->>>>>>> edde3ac6d67a8ed1c01e145a0b9908cd71c791c5
-=======
-  width: 350px;
->>>>>>> edde3ac6d67a8ed1c01e145a0b9908cd71c791c5
 }
 
 .menu .list .card .price {

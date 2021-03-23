@@ -121,10 +121,10 @@
             overflow: hidden;
     
             &:hover .price {
-                animation: greenBox 1s ease-in-out both;
+                animation: greenBox 1s ease-in-out forwards;
             }
             &:hover > .checkbox {
-                animation: greenBox 1s ease-in-out both;
+                animation: greenBox 1s ease-in-out forwards;
             }   
             &:hover > .checkbox .fas {
                 transform: rotate(360deg);
@@ -162,7 +162,6 @@
                     color: $bg-lightGreen;
                     border-radius: 30px;
                     padding: 4px;
-                    
                 }
             }  
         }   
