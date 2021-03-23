@@ -79,12 +79,28 @@
 
         & .starters {
             .text {
+<<<<<<< HEAD
                animation: fadeInPage 5s linear both;
+=======
+<<<<<<< HEAD:scss/4-pages/_menu.scss
+               animation: fadeInPage 5s linear both;
+=======
+                animation: fadeInPage 3s linear both;
+>>>>>>> b357580b353cf94e355b74405371616b81f4c482:scss/_menu.scss
+>>>>>>> 36c0b35a8f07fb03c23d8d6ceb138ef4810e643b
             }
         }
         & .meals {
             .text {
+<<<<<<< HEAD
                 animation: fadeInPage 3s linear both;
+=======
+<<<<<<< HEAD:scss/4-pages/_menu.scss
+                animation: fadeInPage 3s linear both;
+=======
+                animation: fadeInPage 2s linear both;
+>>>>>>> b357580b353cf94e355b74405371616b81f4c482:scss/_menu.scss
+>>>>>>> 36c0b35a8f07fb03c23d8d6ceb138ef4810e643b
             } 
         }
         & .desserts {
@@ -128,16 +144,42 @@
             .text {
                 line-height: 1.4;
                 padding: 10px;
+<<<<<<< HEAD
                 white-space: nowrap; 
                 width: 350px; 
+=======
+<<<<<<< HEAD:scss/4-pages/_menu.scss
+                flex: 1;
+                
+>>>>>>> 36c0b35a8f07fb03c23d8d6ceb138ef4810e643b
             }
             .price {
                 font-weight: bold;
                 align-self: center;
+<<<<<<< HEAD
+=======
+=======
+            }
+            .price {
+                font-weight: bold;
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+    
+>>>>>>> b357580b353cf94e355b74405371616b81f4c482:scss/_menu.scss
+>>>>>>> 36c0b35a8f07fb03c23d8d6ceb138ef4810e643b
             }    
             .checkbox {
                 background-color: $bg-lightGreen;
                 border-radius: 0 15px 15px 0;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:scss/4-pages/_menu.scss
+=======
+                margin-left: 15px;
+>>>>>>> b357580b353cf94e355b74405371616b81f4c482:scss/_menu.scss
+>>>>>>> 36c0b35a8f07fb03c23d8d6ceb138ef4810e643b
                 display: flex;
                 justify-content: center;
                 align-items: center;

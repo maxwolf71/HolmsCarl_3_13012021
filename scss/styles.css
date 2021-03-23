@@ -34,6 +34,10 @@
     visibility: visible;
   }
   to {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 36c0b35a8f07fb03c23d8d6ceb138ef4810e643b
     visibility: hidden;
   }
 }
@@ -102,6 +106,11 @@
 @keyframes fadeInPage {
   0% {
     opacity: 0;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> b357580b353cf94e355b74405371616b81f4c482
+>>>>>>> 36c0b35a8f07fb03c23d8d6ceb138ef4810e643b
     visibility: hidden;
   }
   25% {
@@ -599,6 +608,10 @@ h2 {
 }
 
 .menu .list .starters .text {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 36c0b35a8f07fb03c23d8d6ceb138ef4810e643b
   -webkit-animation: fadeInPage 5s linear both;
           animation: fadeInPage 5s linear both;
 }
@@ -606,6 +619,18 @@ h2 {
 .menu .list .meals .text {
   -webkit-animation: fadeInPage 3s linear both;
           animation: fadeInPage 3s linear both;
+<<<<<<< HEAD
+=======
+=======
+  -webkit-animation: fadeInPage 3s linear both;
+          animation: fadeInPage 3s linear both;
+}
+
+.menu .list .meals .text {
+  -webkit-animation: fadeInPage 2s linear both;
+          animation: fadeInPage 2s linear both;
+>>>>>>> b357580b353cf94e355b74405371616b81f4c482
+>>>>>>> 36c0b35a8f07fb03c23d8d6ceb138ef4810e643b
 }
 
 .menu .list .desserts .text {
