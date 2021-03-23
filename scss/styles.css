@@ -62,8 +62,8 @@
             transform: translateX(150px);
   }
   to {
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
+    -webkit-transform: translateX(-50px);
+            transform: translateX(-50px);
     visibility: visible;
   }
 }
@@ -74,8 +74,8 @@
             transform: translateX(150px);
   }
   to {
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
+    -webkit-transform: translateX(-50px);
+            transform: translateX(-50px);
     visibility: visible;
   }
 }
@@ -613,6 +613,11 @@ h2 {
           animation: fadeInPage 1s linear both;
 }
 
+.menu .list .desserts .text {
+  -webkit-animation: fadeInPage 1s linear both;
+          animation: fadeInPage 1s linear both;
+}
+
 .menu .list h2 {
   font-size: 1rem;
   text-transform: uppercase;
@@ -641,43 +646,52 @@ h2 {
       -ms-flex-pack: justify;
           justify-content: space-between;
   overflow: hidden;
-  position: relative;
+}
+
+.menu .list .card:hover .price {
+  -webkit-animation: greenBox 1s ease-in-out both;
+          animation: greenBox 1s ease-in-out both;
 }
 
 .menu .list .card:hover > .checkbox {
-  -webkit-animation: greenBox 1s ease-in-out forwards;
-          animation: greenBox 1s ease-in-out forwards;
-}
-
-.menu .list .card:hover > .price {
-  -webkit-animation: greenBox 1s ease-in-out forwards;
-          animation: greenBox 1s ease-in-out forwards;
+  -webkit-animation: greenBox 1s ease-in-out both;
+          animation: greenBox 1s ease-in-out both;
 }
 
 .menu .list .card:hover > .checkbox .fas {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
-  -webkit-transition: -webkit-transform 0.5s ease-in-out;
-  transition: -webkit-transform 0.5s ease-in-out;
-  transition: transform 0.5s ease-in-out;
-  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out 0.5s;
+  transition: -webkit-transform 0.5s ease-in-out 0.5s;
+  transition: transform 0.5s ease-in-out 0.5s;
+  transition: transform 0.5s ease-in-out 0.5s, -webkit-transform 0.5s ease-in-out 0.5s;
+}
+
+.menu .list .card .sub-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .menu .list .card .text {
   line-height: 1.4;
-  white-space: nowrap;
-  overflow-wrap: ellipsis;
   padding: 10px;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  white-space: nowrap;
 }
 
 .menu .list .card .price {
   font-weight: bold;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding: 0 30px 10px 0;
 }
 
 .menu .list .card .checkbox {
@@ -692,6 +706,8 @@ h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: -50px;
+  width: 70px;
   visibility: hidden;
 }
 
