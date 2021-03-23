@@ -114,25 +114,22 @@
             display: flex;
             justify-content: space-between;
             overflow: hidden;
-            position: relative;
-
-            &:hover > .checkbox {
-                animation: greenBox 1s ease-in-out forwards;
-            }    
+    
             &:hover > .price {
                animation: greenBox 1s ease-in-out forwards;
-            }    
+            } 
+            &:hover > .checkbox {
+                animation: greenBox 1s ease-in-out forwards;
+            }   
             &:hover > .checkbox .fas {
                 transform: rotate(360deg);
                 transition: transform 0.5s ease-in-out;
             }  
             .text {
                 line-height: 1.4;
-                white-space: nowrap;
-                overflow-wrap: ellipsis;
                 padding: 10px;
-                flex: 1;
-                
+                white-space: nowrap; 
+                width: 350px; 
             }
             .price {
                 font-weight: bold;

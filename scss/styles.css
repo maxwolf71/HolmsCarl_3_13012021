@@ -641,15 +641,14 @@ h2 {
       -ms-flex-pack: justify;
           justify-content: space-between;
   overflow: hidden;
-  position: relative;
 }
 
-.menu .list .card:hover > .checkbox {
+.menu .list .card:hover > .price {
   -webkit-animation: greenBox 1s ease-in-out forwards;
           animation: greenBox 1s ease-in-out forwards;
 }
 
-.menu .list .card:hover > .price {
+.menu .list .card:hover > .checkbox {
   -webkit-animation: greenBox 1s ease-in-out forwards;
           animation: greenBox 1s ease-in-out forwards;
 }
@@ -665,12 +664,9 @@ h2 {
 
 .menu .list .card .text {
   line-height: 1.4;
-  white-space: nowrap;
-  overflow-wrap: ellipsis;
   padding: 10px;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  white-space: nowrap;
+  width: 350px;
 }
 
 .menu .list .card .price {
