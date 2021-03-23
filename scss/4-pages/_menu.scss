@@ -1,3 +1,14 @@
+// ************************** FLECHE RETOUR + LOGO  *******************************  
+.top {
+
+    &__arrow {
+        position: absolute;
+        left: 20px;
+        color:$bg-black;
+    }
+}
+
+// ************************** IMAGE DU MENU  *******************************
 .image img {
     width: 100%;
     max-height: 320px;
@@ -5,10 +16,13 @@
     position: relative;
     z-index: 0;
 }
+
+// ************************** MENUS  *******************************
+
 .menu {
     background-color: $bg_container;
     border-radius: 30px 30px 0 0;
-    padding: 45px 8px;
+    padding: 45px 15px;
     position: relative;
     top: -60px;
     z-index: 1;
@@ -18,41 +32,40 @@
     align-content: center;
 
     @media (min-width: 768px) {
-        display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-between;
     }
 
     .intro {
-        display: flex;
+        @include flex_center;
         justify-content: space-between;
-        align-items: center;
         padding-bottom: 40px;
     
-        & .plain {
+        & .plain-heart {
             position: absolute;
             right: 30px;
+            font-size: 2rem;
 
             @media (min-width: 768px) {
                 left: 10%;
                 top: 20%;
                 font-size: 2rem;
             }
-
             &:active {
                 visibility: hidden;
 
-                &:active + .color {
+                &:active + .color-heart {
                     animation: fadeIn 1s ease-in-out both;
                     visibility: visible;
                 }
             }  
         }
-        & .color {
+        & .color-heart {
             color: $primary-color;
             visibility: hidden;
             position: absolute;
             right: 30px;
+            font-size: 2rem;
 
             @media (min-width: 768px) {
                 left: 10%;
@@ -63,38 +76,37 @@
     }
 
     .list {
+
         & .starters {
-            .card {
-                animation: fadeInPage 3s ease-in-out both;
+            .text {
+                animation: fadeInPage 3s linear both;
             }
         }
         & .meals {
-            .card {
-                animation: fadeInPage 2s ease-in-out both;
+            .text {
+                animation: fadeInPage 2s linear both;
             } 
         }
         & .desserts {
-            .card {
-               animation: fadeInPage 1s ease-in-out both;
+            .text {
+               animation: fadeInPage 1s linear both;
             }
         }
       
         & h2 {
             font-size: 1rem;
             text-transform: uppercase;
-            margin-left: 8px;
         }
       
         .line {
             border: 2px solid $bg-lightGreen;
-            width: 4rem;
-            margin: 5px 0 10px 8px;
+            width: 60px;
+            margin: 5px 0 10px 0;
 
             @media (min-width: 768px) {
                 display: none;
             }
         }
-
         .card {
             background-color: $bg-white;
             border-radius: 15px;
@@ -112,37 +124,37 @@
             &:hover > .checkbox .fas {
                 transform: rotate(360deg);
                 transition: transform 0.5s ease-in-out;
-            }    
-        }
-        .text {
-            line-height: 1.4;
-            white-space: nowrap;
-            overflow-wrap: ellipsis;
-            padding: 10px;
-        }
-        .price {
-            font-weight: bold;
-            width: 100%;
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-
-        }    
-        .checkbox {
-            background-color: $bg-lightGreen;
-            border-radius: 0 15px 15px 0;
-            margin-left: 15px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            visibility: hidden;
-           
-            .fas {
-                background-color: white;
-                color: $bg-lightGreen;
-                border-radius: 30px;
-                padding: 4px;
+            }  
+            .text {
+                line-height: 1.4;
+                white-space: nowrap;
+                overflow-wrap: ellipsis;
+                padding: 10px;
             }
-        }
+            .price {
+                font-weight: bold;
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+    
+            }    
+            .checkbox {
+                background-color: $bg-lightGreen;
+                border-radius: 0 15px 15px 0;
+                margin-left: 15px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                visibility: hidden;
+               
+                .fas {
+                    background-color: white;
+                    color: $bg-lightGreen;
+                    border-radius: 30px;
+                    padding: 4px;
+                }
+            }  
+        }   
     }
 }

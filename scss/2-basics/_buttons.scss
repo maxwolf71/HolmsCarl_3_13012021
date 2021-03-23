@@ -1,0 +1,37 @@
+// Boutons "Explorer nos restaurants" ---------------------
+
+.reservation__btn {
+    @include button;
+
+    &:hover {
+        @include buttonHover;
+    }
+}
+
+// Boutons divers du fonctionnement ---------------------
+
+.selection__btn {
+    width: 90%;
+    background: $bg_container;
+    border-radius: 20px;
+    padding: 28px 0;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    &:hover {
+        cursor: pointer;
+    }
+} 
+
+// Bouton "commander" du menu ---------------------
+
+.menu__btn {
+    @include button;
+    
+    align-self: center;
+    
+    &:hover {
+        @include buttonHover;
+    }
+}
