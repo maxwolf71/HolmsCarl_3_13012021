@@ -79,12 +79,20 @@
 
         & .starters {
             .text {
+<<<<<<< HEAD:scss/4-pages/_menu.scss
                animation: fadeInPage 5s linear both;
+=======
+                animation: fadeInPage 3s linear both;
+>>>>>>> b357580b353cf94e355b74405371616b81f4c482:scss/_menu.scss
             }
         }
         & .meals {
             .text {
+<<<<<<< HEAD:scss/4-pages/_menu.scss
                 animation: fadeInPage 3s linear both;
+=======
+                animation: fadeInPage 2s linear both;
+>>>>>>> b357580b353cf94e355b74405371616b81f4c482:scss/_menu.scss
             } 
         }
         & .desserts {
@@ -131,16 +139,31 @@
                 white-space: nowrap;
                 overflow-wrap: ellipsis;
                 padding: 10px;
+<<<<<<< HEAD:scss/4-pages/_menu.scss
                 flex: 1;
                 
             }
             .price {
                 font-weight: bold;
                 align-self: center;
+=======
+            }
+            .price {
+                font-weight: bold;
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+    
+>>>>>>> b357580b353cf94e355b74405371616b81f4c482:scss/_menu.scss
             }    
             .checkbox {
                 background-color: $bg-lightGreen;
                 border-radius: 0 15px 15px 0;
+<<<<<<< HEAD:scss/4-pages/_menu.scss
+=======
+                margin-left: 15px;
+>>>>>>> b357580b353cf94e355b74405371616b81f4c482:scss/_menu.scss
                 display: flex;
                 justify-content: center;
                 align-items: center;

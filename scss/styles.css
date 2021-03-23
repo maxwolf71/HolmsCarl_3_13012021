@@ -34,6 +34,7 @@
     visibility: visible;
   }
   to {
+<<<<<<< HEAD
     visibility: hidden;
   }
 }
@@ -102,6 +103,8 @@
 @keyframes fadeInPage {
   0% {
     opacity: 0;
+=======
+>>>>>>> b357580b353cf94e355b74405371616b81f4c482
     visibility: hidden;
   }
   25% {
@@ -115,6 +118,106 @@
   }
   100% {
     opacity: 1;
+  }
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.plain, .color {
+  font-size: 1.8rem;
+}
+
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+}
+
+h1 {
+  font-family: 'Shrikhand', Arial, sans-serif;
+  font-size: 1.8rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes greenBox {
+  from {
+    -webkit-transform: translateX(150px);
+            transform: translateX(150px);
+  }
+  to {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    visibility: visible;
+  }
+}
+
+@keyframes greenBox {
+  from {
+    -webkit-transform: translateX(150px);
+            transform: translateX(150px);
+  }
+  to {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    visibility: visible;
+  }
+}
+
+@-webkit-keyframes fadeInPage {
+  0% {
+    opacity: 0;
+    margin-left: 35px;
+  }
+  50% {
+    opacity: 0.4;
+    margin-left: 25px;
+  }
+  100% {
+    opacity: 1;
+    margin-left: 10px;
+  }
+}
+
+@keyframes fadeInPage {
+  0% {
+    opacity: 0;
+    margin-left: 35px;
+  }
+  50% {
+    opacity: 0.4;
+    margin-left: 25px;
+  }
+  100% {
+    opacity: 1;
+    margin-left: 10px;
   }
 }
 
@@ -599,6 +702,7 @@ h2 {
 }
 
 .menu .list .starters .text {
+<<<<<<< HEAD
   -webkit-animation: fadeInPage 5s linear both;
           animation: fadeInPage 5s linear both;
 }
@@ -606,6 +710,15 @@ h2 {
 .menu .list .meals .text {
   -webkit-animation: fadeInPage 3s linear both;
           animation: fadeInPage 3s linear both;
+=======
+  -webkit-animation: fadeInPage 3s linear both;
+          animation: fadeInPage 3s linear both;
+}
+
+.menu .list .meals .text {
+  -webkit-animation: fadeInPage 2s linear both;
+          animation: fadeInPage 2s linear both;
+>>>>>>> b357580b353cf94e355b74405371616b81f4c482
 }
 
 .menu .list .desserts .text {
