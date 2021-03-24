@@ -34,12 +34,21 @@
     @media (min-width: 768px) {
         flex-direction: row;
         justify-content: space-between;
+        padding-top: 100px;
     }
 
     .intro {
         @include flex_center;
         justify-content: space-between;
         padding-bottom: 40px;
+
+        & h1 {
+            @media (min-width: 768px) {
+                position: absolute;
+                top: 5%;
+                left: 40%;
+            }
+        }
     
         & .plain-heart {
             position: absolute;
@@ -47,10 +56,10 @@
             font-size: 2rem;
 
             @media (min-width: 768px) {
-                left: 10%;
-                top: 20%;
-                font-size: 2rem;
+                right: 30px;
+                top: 30px;
             }
+
             &:active {
                 visibility: hidden;
 
@@ -61,22 +70,24 @@
             }  
         }
         & .color-heart {
-            color: $primary-color;
-            visibility: hidden;
+            color: transparent;
+            background: linear-gradient(darken($primary-color, 10),lighten($primary-color, 20));
+            background-clip: text;
             position: absolute;
             right: 30px;
             font-size: 2rem;
+            visibility: hidden;
+            
 
             @media (min-width: 768px) {
-                left: 10%;
-                top: 20%;
-                font-size: 2rem;
+                right: 30px;
+                top: 30px;
             }
         }
     }
 
     .list {
-
+        
         & .starters {
             .text {
                animation: fadeInPage 5s linear both;
@@ -86,11 +97,6 @@
             .text {
                 animation: fadeInPage 3s linear both;
             } 
-        }
-        & .desserts {
-            .text {
-               animation: fadeInPage 1s linear both;
-            }
         }
         & .desserts {
             .text {
@@ -107,10 +113,6 @@
             border: 2px solid $bg-lightGreen;
             width: 60px;
             margin: 5px 0 10px 0;
-
-            @media (min-width: 768px) {
-                display: none;
-            }
         }
         .card {
             background-color: $bg-white;
@@ -119,6 +121,10 @@
             display: flex;
             justify-content: space-between;
             overflow: hidden;
+
+            @media (min-width: 768px) {
+               width: 400px;
+            }
     
             &:hover .price {
                 animation: greenBox 1s ease-in-out forwards;
@@ -130,6 +136,10 @@
                 transform: rotate(360deg);
                 transition: transform 0.5s ease-in-out 0.5s;
             } 
+            &:hover .text {
+                width: 70%;
+            }
+            
             .sub-container {
                 width: 100%;
                 display: flex;
@@ -138,13 +148,18 @@
             .text {
                 line-height: 1.4;
                 padding: 10px;
-                white-space: nowrap;;
+                width: 100%;
+                & h3, p {
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
             }
             .price {
                 font-weight: bold;
                 display: flex;
                 align-items: flex-end;
-                padding: 0 30px 10px 0;
+                padding: 0 15px 10px 0;
 
             }    
             .checkbox {
@@ -153,10 +168,9 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                width: 50px;
                 margin: -50px;
-                width: 70px;
-                visibility: hidden;
-               
+                
                 .fas {
                     background-color: white;
                     color: $bg-lightGreen;

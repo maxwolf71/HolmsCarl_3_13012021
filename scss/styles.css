@@ -148,8 +148,8 @@ h2 {
 
 .reservation__btn {
   color: #FFF;
-  background: -webkit-gradient(linear, left top, left bottom, from(#c9abee), to(#9356DC));
-  background: linear-gradient(#c9abee, #9356DC);
+  background: -webkit-gradient(linear, left top, left bottom, from(#c9abee), to(#782cd3));
+  background: linear-gradient(#c9abee, #782cd3);
   margin-top: 30px;
   padding: 15px 25px;
   border-radius: 30px;
@@ -193,8 +193,8 @@ h2 {
 
 .menu__btn {
   color: #FFF;
-  background: -webkit-gradient(linear, left top, left bottom, from(#c9abee), to(#9356DC));
-  background: linear-gradient(#c9abee, #9356DC);
+  background: -webkit-gradient(linear, left top, left bottom, from(#c9abee), to(#782cd3));
+  background: linear-gradient(#c9abee, #782cd3);
   margin-top: 30px;
   padding: 15px 25px;
   border-radius: 30px;
@@ -492,7 +492,10 @@ h2 {
 }
 
 .gallery__card--details .color-heart {
-  color: #9356DC;
+  color: transparent;
+  background: -webkit-gradient(linear, left top, left bottom, from(#782cd3), to(#c9abee));
+  background: linear-gradient(#782cd3, #c9abee);
+  background-clip: text;
   visibility: hidden;
   font-size: 2rem;
 }
@@ -539,6 +542,7 @@ h2 {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    padding-top: 100px;
   }
 }
 
@@ -558,6 +562,14 @@ h2 {
   padding-bottom: 40px;
 }
 
+@media (min-width: 768px) {
+  .menu .intro h1 {
+    position: absolute;
+    top: 5%;
+    left: 40%;
+  }
+}
+
 .menu .intro .plain-heart {
   position: absolute;
   right: 30px;
@@ -566,9 +578,8 @@ h2 {
 
 @media (min-width: 768px) {
   .menu .intro .plain-heart {
-    left: 10%;
-    top: 20%;
-    font-size: 2rem;
+    right: 30px;
+    top: 30px;
   }
 }
 
@@ -583,18 +594,20 @@ h2 {
 }
 
 .menu .intro .color-heart {
-  color: #9356DC;
-  visibility: hidden;
+  color: transparent;
+  background: -webkit-gradient(linear, left top, left bottom, from(#782cd3), to(#c9abee));
+  background: linear-gradient(#782cd3, #c9abee);
+  background-clip: text;
   position: absolute;
   right: 30px;
   font-size: 2rem;
+  visibility: hidden;
 }
 
 @media (min-width: 768px) {
   .menu .intro .color-heart {
-    left: 10%;
-    top: 20%;
-    font-size: 2rem;
+    right: 30px;
+    top: 30px;
   }
 }
 
@@ -613,11 +626,6 @@ h2 {
           animation: fadeInPage 1s linear both;
 }
 
-.menu .list .desserts .text {
-  -webkit-animation: fadeInPage 1s linear both;
-          animation: fadeInPage 1s linear both;
-}
-
 .menu .list h2 {
   font-size: 1rem;
   text-transform: uppercase;
@@ -627,12 +635,6 @@ h2 {
   border: 2px solid #99E2D0;
   width: 60px;
   margin: 5px 0 10px 0;
-}
-
-@media (min-width: 768px) {
-  .menu .list .line {
-    display: none;
-  }
 }
 
 .menu .list .card {
@@ -646,6 +648,12 @@ h2 {
       -ms-flex-pack: justify;
           justify-content: space-between;
   overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .menu .list .card {
+    width: 400px;
+  }
 }
 
 .menu .list .card:hover .price {
@@ -667,6 +675,10 @@ h2 {
   transition: transform 0.5s ease-in-out 0.5s, -webkit-transform 0.5s ease-in-out 0.5s;
 }
 
+.menu .list .card:hover .text {
+  width: 70%;
+}
+
 .menu .list .card .sub-container {
   width: 100%;
   display: -webkit-box;
@@ -680,7 +692,13 @@ h2 {
 .menu .list .card .text {
   line-height: 1.4;
   padding: 10px;
+  width: 100%;
+}
+
+.menu .list .card .text h3, .menu .list .card .text p {
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .menu .list .card .price {
@@ -691,7 +709,7 @@ h2 {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  padding: 0 30px 10px 0;
+  padding: 0 15px 10px 0;
 }
 
 .menu .list .card .checkbox {
@@ -706,9 +724,8 @@ h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 50px;
   margin: -50px;
-  width: 70px;
-  visibility: hidden;
 }
 
 .menu .list .card .checkbox .fas {

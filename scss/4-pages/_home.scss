@@ -148,7 +148,9 @@
                 }  
             }
             & .color-heart {
-                color: $primary-color;
+                color: transparent;
+                background: linear-gradient(darken($primary-color, 10),lighten($primary-color, 20));
+                background-clip: text;
                 visibility: hidden;
                 font-size: 2rem;
             }
