@@ -33,7 +33,11 @@
 
     @media (min-width: 768px) {
         flex-direction: row;
+<<<<<<< HEAD
         justify-content: space-between;
+=======
+        justify-content: space-around;
+>>>>>>> 3207c602dc786f287179d3eeeba971b4a58372d7
         padding-top: 100px;
     }
 
@@ -76,6 +80,7 @@
             position: absolute;
             right: 30px;
             font-size: 2rem;
+<<<<<<< HEAD
             visibility: hidden;
             
 
@@ -83,6 +88,8 @@
                 right: 30px;
                 top: 30px;
             }
+=======
+>>>>>>> 3207c602dc786f287179d3eeeba971b4a58372d7
         }
     }
 
@@ -123,7 +130,12 @@
             overflow: hidden;
 
             @media (min-width: 768px) {
+<<<<<<< HEAD
                width: 400px;
+=======
+                margin-right: 10px;
+                width: 350px;
+>>>>>>> 3207c602dc786f287179d3eeeba971b4a58372d7
             }
     
             &:hover .price {

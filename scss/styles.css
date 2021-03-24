@@ -539,9 +539,14 @@ h2 {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+<<<<<<< HEAD
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+=======
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+>>>>>>> 3207c602dc786f287179d3eeeba971b4a58372d7
     padding-top: 100px;
   }
 }
@@ -604,6 +609,7 @@ h2 {
   visibility: hidden;
 }
 
+<<<<<<< HEAD
 @media (min-width: 768px) {
   .menu .intro .color-heart {
     right: 30px;
@@ -611,6 +617,8 @@ h2 {
   }
 }
 
+=======
+>>>>>>> 3207c602dc786f287179d3eeeba971b4a58372d7
 .menu .list .starters .text {
   -webkit-animation: fadeInPage 5s linear both;
           animation: fadeInPage 5s linear both;
@@ -652,7 +660,12 @@ h2 {
 
 @media (min-width: 768px) {
   .menu .list .card {
+<<<<<<< HEAD
     width: 400px;
+=======
+    margin-right: 10px;
+    width: 350px;
+>>>>>>> 3207c602dc786f287179d3eeeba971b4a58372d7
   }
 }
 
