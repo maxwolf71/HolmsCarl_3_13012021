@@ -536,9 +536,9 @@ h2 {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding-top: 100px;
   }
 }
 
@@ -566,9 +566,8 @@ h2 {
 
 @media (min-width: 768px) {
   .menu .intro .plain-heart {
-    left: 10%;
-    top: 20%;
-    font-size: 2rem;
+    right: 30px;
+    top: 30px;
   }
 }
 
@@ -590,14 +589,6 @@ h2 {
   font-size: 2rem;
 }
 
-@media (min-width: 768px) {
-  .menu .intro .color-heart {
-    left: 10%;
-    top: 20%;
-    font-size: 2rem;
-  }
-}
-
 .menu .list .starters .text {
   -webkit-animation: fadeInPage 5s linear both;
           animation: fadeInPage 5s linear both;
@@ -606,11 +597,6 @@ h2 {
 .menu .list .meals .text {
   -webkit-animation: fadeInPage 3s linear both;
           animation: fadeInPage 3s linear both;
-}
-
-.menu .list .desserts .text {
-  -webkit-animation: fadeInPage 1s linear both;
-          animation: fadeInPage 1s linear both;
 }
 
 .menu .list .desserts .text {
@@ -629,12 +615,6 @@ h2 {
   margin: 5px 0 10px 0;
 }
 
-@media (min-width: 768px) {
-  .menu .list .line {
-    display: none;
-  }
-}
-
 .menu .list .card {
   background-color: #fff;
   border-radius: 15px;
@@ -646,6 +626,13 @@ h2 {
       -ms-flex-pack: justify;
           justify-content: space-between;
   overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .menu .list .card {
+    margin-right: 10px;
+    width: 350px;
+  }
 }
 
 .menu .list .card:hover .price {
@@ -667,6 +654,10 @@ h2 {
   transition: transform 0.5s ease-in-out 0.5s, -webkit-transform 0.5s ease-in-out 0.5s;
 }
 
+.menu .list .card:hover .text {
+  width: 70%;
+}
+
 .menu .list .card .sub-container {
   width: 100%;
   display: -webkit-box;
@@ -680,7 +671,13 @@ h2 {
 .menu .list .card .text {
   line-height: 1.4;
   padding: 10px;
+  width: 100%;
+}
+
+.menu .list .card .text h3, .menu .list .card .text p {
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .menu .list .card .price {
@@ -691,7 +688,7 @@ h2 {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  padding: 0 30px 10px 0;
+  padding: 0 15px 10px 0;
 }
 
 .menu .list .card .checkbox {
@@ -706,9 +703,8 @@ h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 50px;
   margin: -50px;
-  width: 70px;
-  visibility: hidden;
 }
 
 .menu .list .card .checkbox .fas {
