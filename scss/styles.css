@@ -687,7 +687,7 @@ h2 {
 .menu .list .card .text {
   line-height: 1.4;
   padding: 10px;
-  width: 100%;
+  width: 80%;
   -webkit-transition: width 0.7s ease-in-out;
   transition: width 0.7s ease-in-out;
 }
