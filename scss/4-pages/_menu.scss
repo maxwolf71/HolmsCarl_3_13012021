@@ -126,7 +126,8 @@
             }
     
             &:hover .price {
-                animation: greenBox 1s ease-in-out forwards;
+                transform: translate(-50px);
+                transition: transform 0.8s ease-in-out 0.3s;
             }
             &:hover > .checkbox {
                 animation: greenBox 1s ease-in-out forwards;
@@ -136,7 +137,7 @@
                 transition: transform 0.5s ease-in-out 0.5s;
             } 
             &:hover .text {
-                width: 70%;
+                width: 75%;
             }
             
             .sub-container {
@@ -148,6 +149,7 @@
                 line-height: 1.4;
                 padding: 10px;
                 width: 100%;
+                transition: width 0.7s ease-in-out;
                 & h3, p {
                     white-space: nowrap;
                     overflow: hidden;
