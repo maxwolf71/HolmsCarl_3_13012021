@@ -64,7 +64,6 @@
   to {
     -webkit-transform: translateX(-50px);
             transform: translateX(-50px);
-    visibility: visible;
   }
 }
 
@@ -76,7 +75,6 @@
   to {
     -webkit-transform: translateX(-50px);
             transform: translateX(-50px);
-    visibility: visible;
   }
 }
 
@@ -127,6 +125,7 @@
 
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 
 .plain, .color {
@@ -219,7 +218,7 @@ h2 {
 }
 
 .footer {
-  padding: 30px 20px;
+  padding: 20px 20px;
   background-color: #312f2f;
   color: white;
   line-height: 1.5;
@@ -254,11 +253,6 @@ h2 {
 
 .footer a {
   color: white;
-  text-decoration: none;
-}
-
-.footer a a:hover {
-  cursor: pointer;
 }
 
 .bgLoader {
@@ -654,8 +648,12 @@ h2 {
 }
 
 .menu .list .card:hover .price {
-  -webkit-animation: greenBox 1s ease-in-out forwards;
-          animation: greenBox 1s ease-in-out forwards;
+  -webkit-transform: translate(-50px);
+          transform: translate(-50px);
+  -webkit-transition: -webkit-transform 0.8s ease-in-out 0.3s;
+  transition: -webkit-transform 0.8s ease-in-out 0.3s;
+  transition: transform 0.8s ease-in-out 0.3s;
+  transition: transform 0.8s ease-in-out 0.3s, -webkit-transform 0.8s ease-in-out 0.3s;
 }
 
 .menu .list .card:hover > .checkbox {
@@ -673,7 +671,7 @@ h2 {
 }
 
 .menu .list .card:hover .text {
-  width: 70%;
+  width: 75%;
 }
 
 .menu .list .card .sub-container {
@@ -690,6 +688,8 @@ h2 {
   line-height: 1.4;
   padding: 10px;
   width: 100%;
+  -webkit-transition: width 0.7s ease-in-out;
+  transition: width 0.7s ease-in-out;
 }
 
 .menu .list .card .text h3, .menu .list .card .text p {

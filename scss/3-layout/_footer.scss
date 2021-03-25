@@ -1,11 +1,11 @@
 //-------------------------- FOOTER  -------------------------------
 
 .footer {
-    padding: 30px 20px;
+    padding: 20px 20px;
     background-color: $bg-footer;
     color: white;
     line-height: 1.5;
-    
+
     &__logo {
         margin-bottom: 5%;
     }
@@ -15,7 +15,7 @@
         height: 25px;
         filter: brightness(0) invert(1);
     }
-
+//************************
     &__item {
         display: flex;
         align-items: center;
@@ -29,10 +29,6 @@
     }
     & a {
         color: white;
-        text-decoration: none;
-        & a:hover {
-            cursor: pointer;
-        }
     }
    
 }
