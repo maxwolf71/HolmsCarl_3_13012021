@@ -59,19 +59,19 @@
                 top: 30px;
             }
 
-            &:active {
+            &:hover {
                 visibility: hidden;
 
-                &:active + .color-heart {
+                &:hover + .color-heart {
                     animation: fadeIn 1s ease-in-out both;
                     visibility: visible;
                 }
             }  
         }
         & .color-heart {
-            color: transparent;
-            background: linear-gradient(darken($primary-color, 10),lighten($primary-color, 20));
-            background-clip: text;
+            background: -webkit-linear-gradient(darken($primary-color, 20), lighten($primary-color, 30));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             position: absolute;
             right: 30px;
             font-size: 2rem;

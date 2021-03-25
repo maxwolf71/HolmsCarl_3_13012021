@@ -491,10 +491,9 @@ h2 {
 }
 
 .gallery__card--details .color-heart {
-  color: transparent;
-  background: -webkit-gradient(linear, left top, left bottom, from(#782cd3), to(#c9abee));
-  background: linear-gradient(#782cd3, #c9abee);
-  background-clip: text;
+  background: -webkit-linear-gradient(#6023a9, #e4d5f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   visibility: hidden;
   font-size: 2rem;
 }
@@ -582,21 +581,20 @@ h2 {
   }
 }
 
-.menu .intro .plain-heart:active {
+.menu .intro .plain-heart:hover {
   visibility: hidden;
 }
 
-.menu .intro .plain-heart:active:active + .color-heart {
+.menu .intro .plain-heart:hover:hover + .color-heart {
   -webkit-animation: fadeIn 1s ease-in-out both;
           animation: fadeIn 1s ease-in-out both;
   visibility: visible;
 }
 
 .menu .intro .color-heart {
-  color: transparent;
-  background: -webkit-gradient(linear, left top, left bottom, from(#782cd3), to(#c9abee));
-  background: linear-gradient(#782cd3, #c9abee);
-  background-clip: text;
+  background: -webkit-linear-gradient(#6023a9, #e4d5f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   position: absolute;
   right: 30px;
   font-size: 2rem;
