@@ -269,7 +269,6 @@ h2 {
   -webkit-animation: bgFade 3s both;
           animation: bgFade 3s both;
   z-index: 2;
-  display: none;
 }
 
 .loader {
