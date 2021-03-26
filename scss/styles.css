@@ -190,6 +190,12 @@ h2 {
   cursor: pointer;
 }
 
+@media (min-width: 768px) {
+  .selection__btn {
+    width: 50%;
+  }
+}
+
 .menu__btn {
   color: #FFF;
   background: -webkit-gradient(linear, left top, left bottom, from(#c9abee), to(#782cd3));
@@ -205,6 +211,7 @@ h2 {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  width: 50%;
 }
 
 .menu__btn:hover {
@@ -215,6 +222,12 @@ h2 {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
   background-color: #ae80e5;
+}
+
+@media (min-width: 768px) {
+  .menu__btn {
+    width: 10%;
+  }
 }
 
 .footer {
@@ -631,6 +644,8 @@ h2 {
 .menu .list .card {
   background-color: #fff;
   border-radius: 15px;
+  -webkit-box-shadow: 10px 5px 5px #e2d2d2;
+          box-shadow: 10px 5px 5px #e2d2d2;
   margin-bottom: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
