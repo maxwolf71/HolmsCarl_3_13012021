@@ -64,7 +64,7 @@
         position: relative;
 
         &:hover {
-            background-color: lighten($primary-color, 30);
+            background-color: #f5edff;
 
             & .fas {
                 color: $primary-color;

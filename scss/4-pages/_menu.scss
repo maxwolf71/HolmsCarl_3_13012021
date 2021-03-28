@@ -53,6 +53,7 @@
             position: absolute;
             right: 30px;
             font-size: 2rem;
+            z-index: 1;
 
             @media (min-width: 768px) {
                 right: 30px;
@@ -60,22 +61,22 @@
             }
 
             &:hover {
-                visibility: hidden;
+                opacity: 0;
 
                 &:hover + .color-heart {
-                    animation: fadeIn 1s ease-in-out both;
-                    visibility: visible;
+                    animation: fadeIn 2s ease-in-out forwards;
                 }
             }  
         }
         & .color-heart {
-            background: -webkit-linear-gradient(darken($primary-color, 20), lighten($primary-color, 30));
+            background: -webkit-linear-gradient($primary-color, $secondary-color);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             position: absolute;
             right: 30px;
             font-size: 2rem;
-            visibility: hidden;
+            opacity: 0;
+
             
 
             @media (min-width: 768px) {
@@ -89,17 +90,17 @@
         
         & .starters {
             .text {
-               animation: fadeInPage 5s linear both;
+               animation: fadeInPage 4s ease-in-out both;
             }
         }
         & .meals {
             .text {
-                animation: fadeInPage 3s linear both;
+                animation: fadeInPage 3s ease-in-out both;
             } 
         }
         & .desserts {
             .text {
-               animation: fadeInPage 1s linear both;
+               animation: fadeInPage 1s ease-in-out both;
             }
         }
       
