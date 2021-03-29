@@ -587,6 +587,13 @@ h2 {
   z-index: 1;
 }
 
+@media (max-width: 375px) {
+  .menu .intro .plain-heart {
+    right: 5px;
+    font-size: 1rem;
+  }
+}
+
 @media (min-width: 1024px) {
   .menu .intro .plain-heart {
     right: 30px;
@@ -611,6 +618,13 @@ h2 {
   right: 30px;
   font-size: 2rem;
   opacity: 0;
+}
+
+@media (max-width: 375px) {
+  .menu .intro .color-heart {
+    right: 5px;
+    font-size: 1rem;
+  }
 }
 
 @media (min-width: 1024px) {

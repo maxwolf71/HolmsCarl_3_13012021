@@ -61,6 +61,11 @@
             transition: opacity 1s;
             z-index: 1;
 
+            @media (max-width: 375px) {
+                right: 5px;
+                font-size: 1rem;
+            }
+
             @media (min-width: 1024px) {
                 right: 30px;
                 top: 30px;
@@ -83,6 +88,10 @@
             font-size: 2rem;
             opacity: 0; 
 
+            @media (max-width: 375px) {
+                right: 5px;
+                font-size: 1rem;
+            }
             @media (min-width: 1024px) {
                 right: 30px;
                 top: 30px;
