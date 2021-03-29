@@ -565,10 +565,10 @@ h2 {
   z-index: 1;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 360px) {
   .menu .intro .plain-heart {
-    right: 5px;
-    font-size: 1rem;
+    top: 15px;
+    right: 5%;
   }
 }
 
@@ -598,10 +598,10 @@ h2 {
   opacity: 0;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 360px) {
   .menu .intro .color-heart {
-    right: 5px;
-    font-size: 1rem;
+    top: 15px;
+    right: 5%;
   }
 }
 
