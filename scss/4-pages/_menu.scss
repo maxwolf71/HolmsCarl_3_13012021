@@ -61,7 +61,7 @@
             transition: opacity 1s;
             z-index: 1;
 
-            @media (max-width: 360px) {
+            @media (max-width: 359px) {
                 top: 15px;  
                 right: 5%;
             }
@@ -88,7 +88,7 @@
             font-size: 2rem;
             opacity: 0; 
 
-            @media (max-width: 360px) {
+            @media (max-width: 359px) {
                 top: 15px;
                 right: 5%;
             }

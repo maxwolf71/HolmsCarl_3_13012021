@@ -565,7 +565,7 @@ h2 {
   z-index: 1;
 }
 
-@media (max-width: 360px) {
+@media (max-width: 359px) {
   .menu .intro .plain-heart {
     top: 15px;
     right: 5%;
@@ -598,7 +598,7 @@ h2 {
   opacity: 0;
 }
 
-@media (max-width: 360px) {
+@media (max-width: 359px) {
   .menu .intro .color-heart {
     top: 15px;
     right: 5%;
