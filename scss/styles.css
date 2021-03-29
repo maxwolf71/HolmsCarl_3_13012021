@@ -58,8 +58,8 @@
 
 @-webkit-keyframes greenBox {
   from {
-    -webkit-transform: translateX(150px);
-            transform: translateX(150px);
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
   }
   to {
     -webkit-transform: translateX(-50px);
@@ -69,8 +69,8 @@
 
 @keyframes greenBox {
   from {
-    -webkit-transform: translateX(150px);
-            transform: translateX(150px);
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
   }
   to {
     -webkit-transform: translateX(-50px);
@@ -81,16 +81,6 @@
 @-webkit-keyframes fadeInPage {
   0% {
     opacity: 0;
-    visibility: hidden;
-  }
-  25% {
-    opacity: 0.25;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  75% {
-    opacity: 0.75;
   }
   100% {
     opacity: 1;
@@ -100,16 +90,6 @@
 @keyframes fadeInPage {
   0% {
     opacity: 0;
-    visibility: hidden;
-  }
-  25% {
-    opacity: 0.25;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  75% {
-    opacity: 0.75;
   }
   100% {
     opacity: 1;
@@ -211,7 +191,7 @@ h2 {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  width: 50%;
+  width: 200px;
 }
 
 .menu__btn:hover {
@@ -224,9 +204,11 @@ h2 {
   background-color: #ae80e5;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .menu__btn {
-    width: 10%;
+    position: absolute;
+    bottom: 0;
+    left: 40%;
   }
 }
 
@@ -273,8 +255,8 @@ h2 {
   height: 100%;
   position: fixed;
   background-color: #353535;
-  -webkit-animation: bgFade 3s both;
-          animation: bgFade 3s both;
+  -webkit-animation: bgFade 1s both;
+          animation: bgFade 1s both;
   z-index: 2;
 }
 
@@ -361,7 +343,7 @@ h2 {
   padding: 30px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .reservation {
     width: 50%;
     margin: 0 auto;
@@ -377,7 +359,7 @@ h2 {
   margin: 50px 15px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .selection {
     width: 50%;
     margin: 0 auto;
@@ -424,7 +406,14 @@ h2 {
   padding: 0.8rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1023px) {
+  .gallery {
+    width: 50%;
+    margin: 50px auto;
+  }
+}
+
+@media (min-width: 1024px) {
   .gallery {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -441,7 +430,7 @@ h2 {
   margin-bottom: 1.4rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .gallery__card {
     width: 40%;
   }
@@ -485,24 +474,26 @@ h2 {
 .gallery__card--details .plain-heart {
   position: absolute;
   font-size: 2rem;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+  z-index: 1;
 }
 
 .gallery__card--details .plain-heart:hover {
-  visibility: hidden;
+  opacity: 0;
 }
 
 .gallery__card--details .plain-heart:hover:hover + .color-heart {
-  -webkit-animation: fadeIn 1s ease-in-out both;
-          animation: fadeIn 1s ease-in-out both;
-  visibility: visible;
+  -webkit-animation: fadeIn 1s ease-in-out forwards;
+          animation: fadeIn 1s ease-in-out forwards;
 }
 
 .gallery__card--details .color-heart {
-  background: -webkit-linear-gradient(#6023a9, #e4d5f6);
+  background: -webkit-linear-gradient(#9356DC, #FF79DA);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  visibility: hidden;
   font-size: 2rem;
+  opacity: 0;
 }
 
 .top__arrow {
@@ -538,7 +529,19 @@ h2 {
       align-content: center;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1023px) {
+  .menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media (min-width: 1024px) {
   .menu {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -547,7 +550,7 @@ h2 {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    padding-top: 100px;
+    padding: 100px;
   }
 }
 
@@ -567,7 +570,7 @@ h2 {
   padding-bottom: 40px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .menu .intro h1 {
     position: absolute;
     top: 5%;
@@ -579,10 +582,12 @@ h2 {
   position: absolute;
   right: 30px;
   font-size: 2rem;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
   z-index: 1;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .menu .intro .plain-heart {
     right: 30px;
     top: 30px;
@@ -594,8 +599,8 @@ h2 {
 }
 
 .menu .intro .plain-heart:hover:hover + .color-heart {
-  -webkit-animation: fadeIn 2s ease-in-out forwards;
-          animation: fadeIn 2s ease-in-out forwards;
+  -webkit-animation: fadeIn 1s ease-in-out forwards;
+          animation: fadeIn 1s ease-in-out forwards;
 }
 
 .menu .intro .color-heart {
@@ -608,24 +613,36 @@ h2 {
   opacity: 0;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .menu .intro .color-heart {
     right: 30px;
     top: 30px;
   }
 }
 
-.menu .list .starters .text {
+@media (min-width: 768px) and (max-width: 1023px) {
+  .menu .list {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .menu .list {
+    width: 30%;
+  }
+}
+
+.menu .list .starters .card {
   -webkit-animation: fadeInPage 4s ease-in-out both;
           animation: fadeInPage 4s ease-in-out both;
 }
 
-.menu .list .meals .text {
+.menu .list .meals .card {
   -webkit-animation: fadeInPage 3s ease-in-out both;
           animation: fadeInPage 3s ease-in-out both;
 }
 
-.menu .list .desserts .text {
+.menu .list .desserts .card {
   -webkit-animation: fadeInPage 1s ease-in-out both;
           animation: fadeInPage 1s ease-in-out both;
 }
@@ -656,33 +673,19 @@ h2 {
   overflow: hidden;
 }
 
-@media (min-width: 768px) {
-  .menu .list .card {
-    width: 400px;
-  }
-}
-
 .menu .list .card:hover .price {
   -webkit-transform: translate(-50px);
           transform: translate(-50px);
-  -webkit-transition: -webkit-transform 0.8s ease-in-out 0.3s;
-  transition: -webkit-transform 0.8s ease-in-out 0.3s;
-  transition: transform 0.8s ease-in-out 0.3s;
-  transition: transform 0.8s ease-in-out 0.3s, -webkit-transform 0.8s ease-in-out 0.3s;
 }
 
 .menu .list .card:hover > .checkbox {
-  -webkit-animation: greenBox 1s ease-in-out forwards;
-          animation: greenBox 1s ease-in-out forwards;
+  -webkit-animation: greenBox 0.8s forwards;
+          animation: greenBox 0.8s forwards;
 }
 
 .menu .list .card:hover > .checkbox .fas {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
-  -webkit-transition: -webkit-transform 0.5s ease-in-out 0.5s;
-  transition: -webkit-transform 0.5s ease-in-out 0.5s;
-  transition: transform 0.5s ease-in-out 0.5s;
-  transition: transform 0.5s ease-in-out 0.5s, -webkit-transform 0.5s ease-in-out 0.5s;
 }
 
 .menu .list .card:hover .text {
@@ -722,6 +725,10 @@ h2 {
       -ms-flex-align: end;
           align-items: flex-end;
   padding: 0 15px 10px 0;
+  -webkit-transition: -webkit-transform 0.8s;
+  transition: -webkit-transform 0.8s;
+  transition: transform 0.8s;
+  transition: transform 0.8s, -webkit-transform 0.8s;
 }
 
 .menu .list .card .checkbox {
@@ -745,5 +752,9 @@ h2 {
   color: #99E2D0;
   border-radius: 30px;
   padding: 4px;
+  -webkit-transition: -webkit-transform 0.6s ease-in-out;
+  transition: -webkit-transform 0.6s ease-in-out;
+  transition: transform 0.6s ease-in-out;
+  transition: transform 0.6s ease-in-out, -webkit-transform 0.6s ease-in-out;
 }
 /*# sourceMappingURL=styles.css.map */
