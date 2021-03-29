@@ -56,28 +56,6 @@
   }
 }
 
-@-webkit-keyframes greenBox {
-  from {
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
-  }
-  to {
-    -webkit-transform: translateX(-50px);
-            transform: translateX(-50px);
-  }
-}
-
-@keyframes greenBox {
-  from {
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
-  }
-  to {
-    -webkit-transform: translateX(-50px);
-            transform: translateX(-50px);
-  }
-}
-
 @-webkit-keyframes fadeInPage {
   0% {
     opacity: 0;
@@ -255,8 +233,8 @@ h2 {
   height: 100%;
   position: fixed;
   background-color: #353535;
-  -webkit-animation: bgFade 1s both;
-          animation: bgFade 1s both;
+  -webkit-animation: bgFade 3s forwards;
+          animation: bgFade 3s forwards;
   z-index: 2;
 }
 
@@ -693,8 +671,8 @@ h2 {
 }
 
 .menu .list .card:hover > .checkbox {
-  -webkit-animation: greenBox 0.8s forwards;
-          animation: greenBox 0.8s forwards;
+  -webkit-transform: translate(-50px);
+          transform: translate(-50px);
 }
 
 .menu .list .card:hover > .checkbox .fas {
@@ -759,6 +737,10 @@ h2 {
           align-items: center;
   width: 50px;
   margin: -50px;
+  -webkit-transition: -webkit-transform 0.8s;
+  transition: -webkit-transform 0.8s;
+  transition: transform 0.8s;
+  transition: transform 0.8s, -webkit-transform 0.8s;
 }
 
 .menu .list .card .checkbox .fas {

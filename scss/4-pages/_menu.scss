@@ -144,10 +144,9 @@
     
             &:hover .price {
                 transform: translate(-50px);
-                
             }
             &:hover > .checkbox {
-                animation: greenBox 0.8s forwards;
+                transform: translate(-50px);
             }   
             &:hover > .checkbox .fas {
                 transform: rotate(360deg);
@@ -188,6 +187,7 @@
                 align-items: center;
                 width: 50px;
                 margin: -50px;
+                transition: transform 0.8s;
                 
                 .fas {
                     background-color: white;
