@@ -55,9 +55,9 @@
         }
     
         & .plain-heart {
-            position: absolute;
+            @include position;
+
             right: 30px;
-            font-size: 2rem;
             transition: opacity 1s;
             z-index: 1;
 
@@ -80,12 +80,11 @@
             }  
         }
         & .color-heart {
-            background: -webkit-linear-gradient($primary-color, $secondary-color);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            position: absolute;
+            @include position;
             right: 30px;
-            font-size: 2rem;
+            @include colorHeart;
+            
+        
             opacity: 0; 
 
             @media (max-width: 359px) {
