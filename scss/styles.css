@@ -233,8 +233,8 @@ h2 {
   height: 100%;
   position: fixed;
   background-color: #353535;
-  -webkit-animation: bgFade 3s forwards;
-          animation: bgFade 3s forwards;
+  -webkit-animation: bgFade 1s forwards;
+          animation: bgFade 1s forwards;
   z-index: 2;
 }
 
@@ -561,9 +561,9 @@ h2 {
   position: absolute;
   font-size: 2rem;
   right: 30px;
+  z-index: 1;
   -webkit-transition: opacity 1s;
   transition: opacity 1s;
-  z-index: 1;
 }
 
 @media (max-width: 359px) {
@@ -725,8 +725,6 @@ h2 {
 }
 
 .menu .list .card .checkbox {
-  background-color: #99E2D0;
-  border-radius: 0 15px 15px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -736,6 +734,8 @@ h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #99E2D0;
+  border-radius: 0 15px 15px 0;
   width: 50px;
   margin: -50px;
   -webkit-transition: -webkit-transform 0.8s;
