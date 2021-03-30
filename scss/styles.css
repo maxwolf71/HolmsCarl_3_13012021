@@ -233,8 +233,8 @@ h2 {
   height: 100%;
   position: fixed;
   background-color: #353535;
-  -webkit-animation: bgFade 1s forwards;
-          animation: bgFade 1s forwards;
+  -webkit-animation: bgFade 0.1s forwards;
+          animation: bgFade 0.1s forwards;
   z-index: 2;
 }
 
@@ -584,6 +584,15 @@ h2 {
   transition: opacity 1s;
 }
 
+.menu .intro .plain-heart:hover {
+  opacity: 0;
+}
+
+.menu .intro .plain-heart:hover:hover + .color-heart {
+  -webkit-animation: fadeIn 1s ease-in-out forwards;
+          animation: fadeIn 1s ease-in-out forwards;
+}
+
 @media (max-width: 359px) {
   .menu .intro .plain-heart {
     top: 15px;
@@ -596,15 +605,6 @@ h2 {
     right: 30px;
     top: 30px;
   }
-}
-
-.menu .intro .plain-heart:hover {
-  opacity: 0;
-}
-
-.menu .intro .plain-heart:hover:hover + .color-heart {
-  -webkit-animation: fadeIn 1s ease-in-out forwards;
-          animation: fadeIn 1s ease-in-out forwards;
 }
 
 .menu .intro .color-heart {

@@ -26,13 +26,13 @@
         margin-right: 10px;
     }
     
-    @media (min-width: 768px) and (max-width: 1023px) {
+  @include tablette {
         width: 30%;
         margin: 50px auto;
         border: 2px solid;
         border-radius: 15px;
     }
-    @media (min-width: 1024px) {
+    @include desktop {
         width: 20%;
         margin: 50px auto;
         border: 2px solid;
@@ -50,7 +50,7 @@
     background-color: $bg_container;
     padding: 30px;
 
-    @media (min-width: 1024px) {
+    @include desktop {
         width: 50%;
         margin: 0 auto;
         border-radius: 30px;
@@ -65,7 +65,7 @@
 .selection {
     margin: 50px 15px;
     
-    @media (min-width: 1024px) {
+    @include desktop {
         width: 50%;
         margin: 0 auto;
         border-radius: 30px;
@@ -109,12 +109,12 @@
 .gallery {
     padding: 0.8rem;
 
-    @media (min-width: 768px) and (max-width: 1023px) {
+  @include tablette {
         width: 50%;
         margin: 50px auto;
     }
 
-    @media (min-width: 1024px) {
+    @include desktop {
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
@@ -124,7 +124,7 @@
         position: relative;
         margin-bottom: 1.4rem;
         
-        @media (min-width: 1024px) {
+        @include desktop {
             width: 40%;
         }
         & img {
