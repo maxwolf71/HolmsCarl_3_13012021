@@ -83,11 +83,11 @@
         & .color-heart {
             @include position;
             right: 30px;
-            @include colorHeart
+            @include colorHeart;
             
         
             opacity: 0; 
-
+    
             @media (max-width: 359px) {
                 top: 15px;
                 right: 5%;
