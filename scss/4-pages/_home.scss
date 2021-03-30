@@ -25,6 +25,20 @@
     &__icon {
         margin-right: 10px;
     }
+    
+    @media (min-width: 768px) and (max-width: 1023px) {
+        width: 30%;
+        margin: 50px auto;
+        border: 2px solid;
+        border-radius: 15px;
+    }
+    @media (min-width: 1024px) {
+        width: 20%;
+        margin: 50px auto;
+        border: 2px solid;
+        border-radius: 15px;
+    }
+
 }
 
 // ************************** RESERVATION  *******************************  
