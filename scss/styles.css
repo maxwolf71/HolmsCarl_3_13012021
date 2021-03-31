@@ -105,8 +105,8 @@ h2 {
 
 .reservation__btn {
   color: #FFF;
-  background: -webkit-gradient(linear, left top, left bottom, from(#c9abee), to(#782cd3));
-  background: linear-gradient(#c9abee, #782cd3);
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(#FF79DA, #9356DC);
   margin-top: 30px;
   padding: 15px 25px;
   border-radius: 30px;
@@ -156,8 +156,8 @@ h2 {
 
 .menu__btn {
   color: #FFF;
-  background: -webkit-gradient(linear, left top, left bottom, from(#c9abee), to(#782cd3));
-  background: linear-gradient(#c9abee, #782cd3);
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(#FF79DA, #9356DC);
   margin-top: 30px;
   padding: 15px 25px;
   border-radius: 30px;
@@ -233,8 +233,8 @@ h2 {
   height: 100%;
   position: fixed;
   background-color: #353535;
-  -webkit-animation: bgFade 0.1s forwards;
-          animation: bgFade 0.1s forwards;
+  -webkit-animation: bgFade 3s forwards;
+          animation: bgFade 3s forwards;
   z-index: 2;
 }
 
